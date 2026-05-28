@@ -1,0 +1,28 @@
+{
+  "root": "/theory",
+  "home": {
+    "route": "/theory",
+    "screen": "TheoryHomePage",
+    "source": "data/pageConfig.json"
+  },
+  "moduleMap": {
+    "route": "/theory/:moduleId",
+    "screen": "ModuleMapPage",
+    "source": "data/modules.json + data/chapters.json + data/lessonFlow.json"
+  },
+  "chapterPlay": {
+    "route": "/theory/:moduleId/:chapterId",
+    "screen": "ChapterPlayPage",
+    "source": "data/teachingLessons.json + data/questions.json + data/lessonFlow.json"
+  },
+  "chapterResult": {
+    "route": "/theory/:moduleId/:chapterId/result",
+    "screen": "ChapterResultPage",
+    "source": "src/starEngine.ts + user progress state"
+  },
+  "wrongbook": {
+    "route": "/theory/wrongbook",
+    "screen": "WrongBookPage",
+    "source": "wrongBook state generated from answers"
+  }
+}

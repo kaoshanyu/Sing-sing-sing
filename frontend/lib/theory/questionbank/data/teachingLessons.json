@@ -1,0 +1,461 @@
+[
+  {
+    "id": "teach_staff_01",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "title": "五条线四个间",
+    "goal": "能分清线、间，并能点击指定位置",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "五条线四个间",
+        "text": "先知道音符写在哪里",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_staff_02",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "title": "高音谱号和中央C",
+    "goal": "能在五线谱上找到中央C",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "高音谱号和中央C",
+        "text": "找到最重要的起点音",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_staff_03",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "title": "音名和唱名",
+    "goal": "能看五线谱音符选音名/唱名",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "音名和唱名",
+        "text": "CDE 对应 do re mi",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_staff_04",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "title": "钢琴和五线谱",
+    "goal": "能把琴键、音名、五线谱位置对应起来",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "钢琴和五线谱",
+        "text": "按下琴键看到谱子",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_staff_05",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "title": "全音和半音",
+    "goal": "能判断两个相邻音是全音还是半音",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "全音和半音",
+        "text": "音高之间的距离",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_staff_06",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "title": "升降号和还原号",
+    "goal": "能识别 #、♭、♮ 的作用",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "升降号和还原号",
+        "text": "音变高、变低、变回来",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_staff_07",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "title": "五线谱节奏",
+    "goal": "能看懂基础音符时值",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "五线谱节奏",
+        "text": "一个音要唱多久",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_staff_08",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "title": "休止符和综合识谱",
+    "goal": "能听/看简单旋律并选对谱子",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "休止符和综合识谱",
+        "text": "有声音，也有停顿",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_jianpu_01",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "title": "认识数字音符",
+    "goal": "能把数字音符和唱名对应起来",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "认识数字音符",
+        "text": "1 2 3 4 5 6 7",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_jianpu_02",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "title": "高音点和低音点",
+    "goal": "能判断上点、下点带来的高低变化",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "高音点和低音点",
+        "text": "同一个数字也有高低",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_jianpu_03",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "title": "简谱节奏和休止",
+    "goal": "能看懂基础时值、附点和休止",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "简谱节奏和休止",
+        "text": "数字要唱多久，0 表示停",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_jianpu_04",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "title": "音阶和五声音阶",
+    "goal": "能识别七声音阶和五声音阶",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "音阶和五声音阶",
+        "text": "从 1234567 到 12356",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_jianpu_05",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "title": "简谱升降号和调号",
+    "goal": "能理解临时升降号和调号带来的听感变化",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "简谱升降号和调号",
+        "text": "#4、♭7、1=C",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_gongche_01",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "title": "认识工尺谱字",
+    "goal": "能认出常见工尺谱字",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "认识工尺谱字",
+        "text": "上、尺、工、凡、六、五、乙",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_gongche_02",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "title": "工尺谱和简谱对应",
+    "goal": "能把工尺谱字和简谱数字配对",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "工尺谱和简谱对应",
+        "text": "传统字谱也能对应音高",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_gongche_03",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "title": "工尺谱小旋律",
+    "goal": "能把短工尺谱转换成简谱",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "工尺谱小旋律",
+        "text": "几个字连起来就是旋律",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  },
+  {
+    "id": "teach_gongche_04",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "title": "文化小挑战",
+    "goal": "能完成工尺谱综合小练习",
+    "steps": [
+      {
+        "type": "intro_card",
+        "title": "文化小挑战",
+        "text": "传统记谱也可以唱出来",
+        "primaryAction": "我知道了"
+      },
+      {
+        "type": "interactive_demo",
+        "title": "点一点试试",
+        "text": "本步不是考试，点错也没关系。让用户先听到声音、看到变化。",
+        "component": "auto_by_chapter"
+      },
+      {
+        "type": "micro_practice_intro",
+        "title": "开始小练习",
+        "text": "接下来 10 道题，答对越多星星越多。2 星即可进入下一关。",
+        "primaryAction": "开始练习"
+      }
+    ]
+  }
+]

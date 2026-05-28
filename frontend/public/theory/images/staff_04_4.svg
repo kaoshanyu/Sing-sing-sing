@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="280" viewBox="0 0 520 280">
+<rect width="100%" height="100%" rx="24" fill="#FFFDF9"/>
+<rect x="14" y="14" width="492" height="252" rx="18" fill="#FFFFFF" stroke="#E8DDD3" stroke-width="3"/>
+<text x="40" y="58" font-size="28" font-family="Arial, sans-serif" fill="#4B3D32" font-weight="700">钢琴键盘</text>
+<text x="40" y="92" font-size="18" font-family="Arial, sans-serif" fill="#8B745F">高亮琴键对应音名</text>
+<rect x="60" y="130" width="55" height="90" fill="#FFFFFF" stroke="#6B5A4D"/>
+<text x="80" y="200" font-size="20" font-family="Arial" fill="#4B3D32">C</text>
+<rect x="115" y="130" width="55" height="90" fill="#FFFFFF" stroke="#6B5A4D"/>
+<text x="135" y="200" font-size="20" font-family="Arial" fill="#4B3D32">D</text>
+<rect x="170" y="130" width="55" height="90" fill="#FFFFFF" stroke="#6B5A4D"/>
+<text x="190" y="200" font-size="20" font-family="Arial" fill="#4B3D32">E</text>
+<rect x="225" y="130" width="55" height="90" fill="#F3D5C3" stroke="#6B5A4D"/>
+<text x="245" y="200" font-size="20" font-family="Arial" fill="#4B3D32">F</text>
+<rect x="280" y="130" width="55" height="90" fill="#FFFFFF" stroke="#6B5A4D"/>
+<text x="300" y="200" font-size="20" font-family="Arial" fill="#4B3D32">G</text>
+<rect x="335" y="130" width="55" height="90" fill="#FFFFFF" stroke="#6B5A4D"/>
+<text x="355" y="200" font-size="20" font-family="Arial" fill="#4B3D32">A</text>
+<rect x="390" y="130" width="55" height="90" fill="#FFFFFF" stroke="#6B5A4D"/>
+<text x="410" y="200" font-size="20" font-family="Arial" fill="#4B3D32">B</text>
+<rect x="98" y="130" width="32" height="55" rx="4" fill="#4B3D32"/>
+<rect x="153" y="130" width="32" height="55" rx="4" fill="#4B3D32"/>
+<rect x="263" y="130" width="32" height="55" rx="4" fill="#4B3D32"/>
+<rect x="318" y="130" width="32" height="55" rx="4" fill="#4B3D32"/>
+<rect x="373" y="130" width="32" height="55" rx="4" fill="#4B3D32"/>
+</svg>

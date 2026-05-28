@@ -1,0 +1,234 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Creamy Healing Theme - 奶油治愈系 */
+  --background: #FDF8F3;
+  --foreground: #4A3728;
+  --card: #FFFFFF;
+  --card-foreground: #4A3728;
+  --popover: #FFFFFF;
+  --popover-foreground: #4A3728;
+  --primary: #E8B4A0;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F5EDE8;
+  --secondary-foreground: #6B5344;
+  --muted: #F5EDE8;
+  --muted-foreground: #8B7355;
+  --accent: #A8D5BA;
+  --accent-foreground: #2D5A3D;
+  --destructive: #E8A0A0;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8DDD5;
+  --input: #F5EDE8;
+  --ring: #E8B4A0;
+  
+  /* Chapter Theme Colors */
+  --chapter-1: #FFD4A3;
+  --chapter-2: #A8D5BA;
+  --chapter-3: #B4C7E8;
+  --chapter-4: #E8B4D4;
+  --chapter-5: #D4B4E8;
+  --chapter-6: #E8D4A0;
+  --chapter-7: #A8E8D5;
+  
+  /* Star Colors */
+  --star-gold: #FFD700;
+  --star-empty: #E8DDD5;
+  
+  --chart-1: #E8B4A0;
+  --chart-2: #A8D5BA;
+  --chart-3: #B4C7E8;
+  --chart-4: #E8B4D4;
+  --chart-5: #D4B4E8;
+  --radius: 1rem;
+  --sidebar: #FDF8F3;
+  --sidebar-foreground: #4A3728;
+  --sidebar-primary: #E8B4A0;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5EDE8;
+  --sidebar-accent-foreground: #6B5344;
+  --sidebar-border: #E8DDD5;
+  --sidebar-ring: #E8B4A0;
+}
+
+.dark {
+  /* Dark mode - Soft cream dark */
+  --background: #2A2420;
+  --foreground: #F5EDE8;
+  --card: #3A3430;
+  --card-foreground: #F5EDE8;
+  --popover: #3A3430;
+  --popover-foreground: #F5EDE8;
+  --primary: #E8B4A0;
+  --primary-foreground: #2A2420;
+  --secondary: #4A4440;
+  --secondary-foreground: #F5EDE8;
+  --muted: #4A4440;
+  --muted-foreground: #B8A090;
+  --accent: #A8D5BA;
+  --accent-foreground: #2A2420;
+  --destructive: #E8A0A0;
+  --destructive-foreground: #2A2420;
+  --border: #4A4440;
+  --input: #4A4440;
+  --ring: #E8B4A0;
+  --chart-1: #E8B4A0;
+  --chart-2: #A8D5BA;
+  --chart-3: #B4C7E8;
+  --chart-4: #E8B4D4;
+  --chart-5: #D4B4E8;
+  --sidebar: #2A2420;
+  --sidebar-foreground: #F5EDE8;
+  --sidebar-primary: #E8B4A0;
+  --sidebar-primary-foreground: #2A2420;
+  --sidebar-accent: #4A4440;
+  --sidebar-accent-foreground: #F5EDE8;
+  --sidebar-border: #4A4440;
+  --sidebar-ring: #E8B4A0;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Glass morphism effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-card {
+  background: rgba(58, 52, 48, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Star animation */
+@keyframes star-shine {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.star-animate {
+  animation: star-shine 1.5s ease-in-out infinite;
+}
+
+/* Level node glow */
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 180, 160, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(232, 180, 160, 0.2); }
+}
+
+.node-current {
+  animation: node-pulse 2s ease-in-out infinite;
+}
+
+/* Path animation */
+@keyframes path-draw {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+.path-animated {
+  stroke-dasharray: 100;
+  animation: path-draw 1s ease-out forwards;
+}
+
+/* Floating animation for AI pet */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Chapter unlock animation */
+@keyframes unlock-bounce {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.unlock-animate {
+  animation: unlock-bounce 0.5s ease-out forwards;
+}
+
+/* Progress bar shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.progress-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Pitch visualization canvas */
+.pitch-canvas {
+  background: linear-gradient(180deg, rgba(248, 244, 240, 0.5) 0%, rgba(232, 180, 160, 0.1) 100%);
+  border-radius: 1rem;
+}
+
+.dark .pitch-canvas {
+  background: linear-gradient(180deg, rgba(42, 36, 32, 0.5) 0%, rgba(232, 180, 160, 0.1) 100%);
+}
+
+/* Bar pulse animation for singing waveform */
+@keyframes pulse-bar {
+  from { opacity: 0.3; transform: scaleY(0.6); }
+  to { opacity: 1; transform: scaleY(1); }
+}

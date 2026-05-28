@@ -1,0 +1,20 @@
+{
+  "page": "乐理知识首页",
+  "deleteCards": [
+    "音乐词典"
+  ],
+  "topCardsMapToModules": [
+    "staff",
+    "jianpu",
+    "gongche"
+  ],
+  "bottomCards": [
+    {
+      "id": "wrongbook",
+      "title": "错题本",
+      "route": "/theory/wrongbook",
+      "badgeFrom": "wrongQuestionCount"
+    }
+  ],
+  "moduleCardBehavior": "点击上方三个卡片进入对应题库闯关地图；工尺谱如未解锁则弹出解锁提示。"
+}

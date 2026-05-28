@@ -1,0 +1,59 @@
+[
+  {
+    "id": "staff",
+    "title": "五线谱学习",
+    "shortTitle": "五线谱",
+    "icon": "music_note",
+    "route": "/theory/staff",
+    "order": 1,
+    "status": "unlocked",
+    "unitCount": 8,
+    "theme": {
+      "main": "#A8CBB7",
+      "accent": "#DDB29C",
+      "reward": "gold_border"
+    },
+    "entryCard": {
+      "progressText": "已学 {completed}/{total} 单元",
+      "tapAction": "openModuleMap"
+    }
+  },
+  {
+    "id": "jianpu",
+    "title": "简谱学习",
+    "shortTitle": "简谱",
+    "icon": "number_1",
+    "route": "/theory/jianpu",
+    "order": 2,
+    "status": "unlocked",
+    "unitCount": 5,
+    "theme": {
+      "main": "#F2CFA4",
+      "accent": "#DDB29C",
+      "reward": "gold_border"
+    },
+    "entryCard": {
+      "progressText": "已学 {completed}/{total} 单元",
+      "tapAction": "openModuleMap"
+    }
+  },
+  {
+    "id": "gongche",
+    "title": "工尺谱学习",
+    "shortTitle": "工尺谱",
+    "icon": "gongche_shang",
+    "route": "/theory/gongche",
+    "order": 3,
+    "status": "locked_until_jianpu_2stars",
+    "unitCount": 4,
+    "theme": {
+      "main": "#C8B8A8",
+      "accent": "#DDB29C",
+      "reward": "gold_border"
+    },
+    "entryCard": {
+      "progressText": "即将解锁",
+      "tapAction": "openLockedToast"
+    }
+  }
+]

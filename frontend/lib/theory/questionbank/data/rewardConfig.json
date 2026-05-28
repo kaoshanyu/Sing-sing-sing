@@ -1,0 +1,43 @@
+{
+  "perQuestionCorrect": {
+    "animation": "small_bounce_sparkle",
+    "durationMs": 900,
+    "textPool": [
+      "答对啦！",
+      "真棒！",
+      "耳朵和眼睛都变准了！",
+      "继续保持！"
+    ]
+  },
+  "perQuestionWrong": {
+    "animation": "soft_hint_shake",
+    "durationMs": 500,
+    "text": "没关系，看提示再来一次。"
+  },
+  "chapterStars": {
+    "oneStar": {
+      "minAccuracy": 0.01,
+      "maxAccuracy": 0.49,
+      "passed": false
+    },
+    "twoStars": {
+      "minAccuracy": 0.5,
+      "maxAccuracy": 0.79,
+      "passed": true
+    },
+    "threeStars": {
+      "minAccuracy": 0.8,
+      "maxAccuracy": 1,
+      "passed": true
+    }
+  },
+  "moduleGoldReward": {
+    "threshold": 0.85,
+    "effect": "gold_border_and_celebration",
+    "description": "某个门类累计获得星星达到总星星的85%，该门类卡片和闯关地图外框变金，并播放一次庆祝动画。"
+  },
+  "unlockRules": {
+    "chapter": "当前关达到2星解锁下一关",
+    "gongche": "建议简谱至少完成2关且均达到2星后解锁工尺谱"
+  }
+}

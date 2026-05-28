@@ -1,0 +1,5357 @@
+[
+  {
+    "id": "Q0001",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第一线",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第一线",
+      "第一间",
+      "第二线",
+      "第二间"
+    ],
+    "answer": "第一线",
+    "explanation": "第一线 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0002",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第一间",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第一线",
+      "第一间",
+      "第二线",
+      "第二间"
+    ],
+    "answer": "第一间",
+    "explanation": "第一间 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0003",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第二线",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第一线",
+      "第一间",
+      "第二线",
+      "第二间"
+    ],
+    "answer": "第二线",
+    "explanation": "第二线 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0004",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第二间",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第一线",
+      "第一间",
+      "第二线",
+      "第二间"
+    ],
+    "answer": "第二间",
+    "explanation": "第二间 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0005",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第三线",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第三线",
+      "第三间",
+      "第四线",
+      "第四间",
+      "第五线"
+    ],
+    "answer": "第三线",
+    "explanation": "第三线 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0006",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第三间",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第三线",
+      "第三间",
+      "第四线",
+      "第四间",
+      "第五线"
+    ],
+    "answer": "第三间",
+    "explanation": "第三间 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0007",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第四线",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第三线",
+      "第三间",
+      "第四线",
+      "第四间",
+      "第五线"
+    ],
+    "answer": "第四线",
+    "explanation": "第四线 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0008",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第四间",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第三线",
+      "第三间",
+      "第四线",
+      "第四间",
+      "第五线"
+    ],
+    "answer": "第四间",
+    "explanation": "第四间 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0009",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：第五线",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第三线",
+      "第三间",
+      "第四线",
+      "第四间",
+      "第五线"
+    ],
+    "answer": "第五线",
+    "explanation": "第五线 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0010",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "type": "CLICK_OR_CHOICE_STAFF_POSITION",
+    "difficulty": 1,
+    "prompt": "请找到：线",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_01_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "第三线",
+      "第三间",
+      "第四线",
+      "第四间"
+    ],
+    "answer": "线",
+    "explanation": "线 是五线谱中的基础位置。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0011",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C",
+      "下加一线",
+      "第三线",
+      "第四间"
+    ],
+    "answer": "中央C",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0012",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C",
+      "高音谱号",
+      "低音谱号",
+      "休止符"
+    ],
+    "answer": "高音谱号",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0013",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C常在下加一线",
+      "下加一线",
+      "第三线",
+      "第四间"
+    ],
+    "answer": "中央C常在下加一线",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0014",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C",
+      "下加一线",
+      "第三线",
+      "第四间"
+    ],
+    "answer": "中央C",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0015",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C唱作 do",
+      "下加一线",
+      "第三线",
+      "第四间"
+    ],
+    "answer": "中央C唱作 do",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0016",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C",
+      "高音谱号",
+      "低音谱号",
+      "休止符"
+    ],
+    "answer": "高音谱号",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0017",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "下加一线",
+      "第三线",
+      "第四间",
+      "第五线"
+    ],
+    "answer": "下加一线",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0018",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C",
+      "下加一线",
+      "第三线",
+      "第四间"
+    ],
+    "answer": "中央C",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0019",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C",
+      "高音谱号",
+      "低音谱号",
+      "休止符"
+    ],
+    "answer": "高音谱号",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0020",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "type": "STAFF_CONCEPT_CHOICE",
+    "difficulty": 1,
+    "prompt": "图中重点应该选择什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_02_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "中央C",
+      "下加一线",
+      "第三线",
+      "第四间"
+    ],
+    "answer": "中央C",
+    "explanation": "中央C是小白认识五线谱时最重要的起点。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0021",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "C",
+    "explanation": "C 的唱名是 do。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0022",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "D",
+    "explanation": "D 的唱名是 re。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0023",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "E",
+    "explanation": "E 的唱名是 mi。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0024",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "F",
+    "explanation": "F 的唱名是 fa。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0025",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "G",
+    "explanation": "G 的唱名是 sol。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0026",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "A",
+    "explanation": "A 的唱名是 la。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0027",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "B",
+    "explanation": "B 的唱名是 si。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0028",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "C",
+    "explanation": "C 的唱名是 do。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0029",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "E",
+    "explanation": "E 的唱名是 mi。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0030",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "type": "STAFF_NOTE_NAME_CHOICE",
+    "difficulty": 1,
+    "prompt": "这个五线谱音符的音名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_03_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "G",
+    "explanation": "G 的唱名是 sol。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0031",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 C 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_1.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "C"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "C",
+    "explanation": "高亮琴键对应音名 C。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0032",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 D 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_2.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "D"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "D",
+    "explanation": "高亮琴键对应音名 D。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0033",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 E 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_3.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "E"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "E",
+    "explanation": "高亮琴键对应音名 E。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0034",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 F 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_4.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "F"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "F",
+    "explanation": "高亮琴键对应音名 F。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0035",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 G 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_5.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "G"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "G",
+    "explanation": "高亮琴键对应音名 G。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0036",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 A 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_6.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "A"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "A",
+    "explanation": "高亮琴键对应音名 A。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0037",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 B 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_7.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "B"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "B",
+    "explanation": "高亮琴键对应音名 B。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0038",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 C 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_8.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "C"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "C",
+    "explanation": "高亮琴键对应音名 C。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0039",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 E 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_9.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "E"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "E",
+    "explanation": "高亮琴键对应音名 E。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0040",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "type": "CLICK_PIANO_KEY_OR_CHOICE",
+    "difficulty": 1,
+    "prompt": "请点击/选择钢琴上的 G 键。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_04_10.svg",
+      "audio": ""
+    },
+    "interaction": {
+      "targetKey": "G"
+    },
+    "options": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "A",
+      "B"
+    ],
+    "answer": "G",
+    "explanation": "高亮琴键对应音名 G。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0041",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "C-D 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "全音",
+    "explanation": "C-D 是全音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0042",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "D-E 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "全音",
+    "explanation": "D-E 是全音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0043",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "E-F 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "半音",
+    "explanation": "E-F 是半音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0044",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "F-G 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "全音",
+    "explanation": "F-G 是全音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0045",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "G-A 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "全音",
+    "explanation": "G-A 是全音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0046",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "A-B 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "全音",
+    "explanation": "A-B 是全音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0047",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "B-C 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "半音",
+    "explanation": "B-C 是半音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0048",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "C-#C 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "半音",
+    "explanation": "C-#C 是半音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0049",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "F-#F 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "半音",
+    "explanation": "F-#F 是半音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0050",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "type": "BINARY_CHOICE",
+    "difficulty": 1,
+    "prompt": "E-#F 之间是全音还是半音？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_05_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "全音",
+      "半音"
+    ],
+    "answer": "全音",
+    "explanation": "E-#F 是全音关系。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0051",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "# 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "升高半音",
+      "降低半音",
+      "还原",
+      "没有变化"
+    ],
+    "answer": "升高半音",
+    "explanation": "# 的作用是：升高半音。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0052",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "♭ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "升高半音",
+      "降低半音",
+      "还原",
+      "没有变化"
+    ],
+    "answer": "降低半音",
+    "explanation": "♭ 的作用是：降低半音。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0053",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "♮ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "升高半音",
+      "降低半音",
+      "还原",
+      "没有变化"
+    ],
+    "answer": "还原",
+    "explanation": "♮ 的作用是：还原。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0054",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "F# 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比原音高",
+      "比原音低",
+      "变成休止",
+      "变成节奏"
+    ],
+    "answer": "比原音高",
+    "explanation": "F# 的作用是：升F。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0055",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "Bb 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比原音高",
+      "比原音低",
+      "变成休止",
+      "变成节奏"
+    ],
+    "answer": "比原音低",
+    "explanation": "Bb 的作用是：降B。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0056",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "C# 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比原音高",
+      "比原音低",
+      "变成休止",
+      "变成节奏"
+    ],
+    "answer": "比原音高",
+    "explanation": "C# 的作用是：比C高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0057",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "Eb 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比原音高",
+      "比原音低",
+      "变成休止",
+      "变成节奏"
+    ],
+    "answer": "比原音低",
+    "explanation": "Eb 的作用是：比E低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0058",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "还原号 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "升高半音",
+      "降低半音",
+      "还原",
+      "没有变化"
+    ],
+    "answer": "还原",
+    "explanation": "还原号 的作用是：变回原音。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0059",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "#4 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比原音高",
+      "比原音低",
+      "变成休止",
+      "变成节奏"
+    ],
+    "answer": "比原音高",
+    "explanation": "#4 的作用是：比4高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0060",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "type": "ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "♭7 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_06_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比原音高",
+      "比原音低",
+      "变成休止",
+      "变成节奏"
+    ],
+    "answer": "比原音低",
+    "explanation": "♭7 的作用是：比7低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0061",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "全音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "4拍",
+    "explanation": "全音符 通常是 4拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0062",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "二分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "2拍",
+    "explanation": "二分音符 通常是 2拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0063",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "四分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "1拍",
+    "explanation": "四分音符 通常是 1拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0064",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "八分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "半拍",
+    "explanation": "八分音符 通常是 半拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0065",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "十六分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "1/4拍",
+    "explanation": "十六分音符 通常是 1/4拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0066",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "附点二分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "3拍",
+    "explanation": "附点二分音符 通常是 3拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0067",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "附点四分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "1.5拍",
+    "explanation": "附点四分音符 通常是 1.5拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0068",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "两个八分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "1拍",
+    "explanation": "两个八分音符 通常是 1拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0069",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "四个十六分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "1拍",
+    "explanation": "四个十六分音符 通常是 1拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0070",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "type": "RHYTHM_VALUE_CHOICE",
+    "difficulty": 1,
+    "prompt": "一小节4/4中的四分音符 通常表示几拍？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_07_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "4拍",
+      "3拍",
+      "2拍",
+      "1.5拍",
+      "1拍",
+      "半拍",
+      "1/4拍"
+    ],
+    "answer": "1拍",
+    "explanation": "一小节4/4中的四分音符 通常是 1拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0071",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：四分休止符",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_1.svg",
+      "audio": "audio_placeholder/四分休止符.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "停1拍",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0072",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：二分休止符",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_2.svg",
+      "audio": "audio_placeholder/二分休止符.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "停2拍",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0073",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：全休止符",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_3.svg",
+      "audio": "audio_placeholder/全休止符.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "停4拍",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0074",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：听到 C-D-E",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_4.svg",
+      "audio": "audio_placeholder/听到 C-D-E.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "C-D-E",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0075",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：看到 C-D-E",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_5.svg",
+      "audio": "audio_placeholder/看到 C-D-E.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "audio_cde",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0076",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：听到 E-D-C",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_6.svg",
+      "audio": "audio_placeholder/听到 E-D-C.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "E-D-C",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0077",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：有0.5拍停顿",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_7.svg",
+      "audio": "audio_placeholder/有0.5拍停顿.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "八分休止",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0078",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：一小节4/4全停",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_8.svg",
+      "audio": "audio_placeholder/一小节4/4全停.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "全休止符",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0079",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：拖出 C-D-E",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_9.svg",
+      "audio": "audio_placeholder/拖出 C-D-E.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "C-D-E",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0080",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "type": "COMPREHENSIVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "请选择正确答案：听谱综合：C-C-G-G",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/staff_08_10.svg",
+      "audio": "audio_placeholder/听谱综合：C-C-G-G.mp3"
+    },
+    "interaction": {},
+    "options": [
+      "停1拍",
+      "停2拍",
+      "停4拍",
+      "八分休止",
+      "C-D-E",
+      "E-D-C",
+      "C-C-G-G",
+      "audio_cde"
+    ],
+    "answer": "C-C-G-G",
+    "explanation": "这题把音高、节奏或休止结合起来练习。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0081",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 1 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "do",
+    "explanation": "简谱 1 对应 do。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0082",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 2 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "re",
+    "explanation": "简谱 2 对应 re。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0083",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 3 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "mi",
+    "explanation": "简谱 3 对应 mi。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0084",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 4 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "fa",
+    "explanation": "简谱 4 对应 fa。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0085",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "sol",
+    "explanation": "简谱 5 对应 sol。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0086",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 6 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "la",
+    "explanation": "简谱 6 对应 la。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0087",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 7 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "si",
+    "explanation": "简谱 7 对应 si。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0088",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 1 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "do",
+    "explanation": "简谱 1 对应 do。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0089",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 3 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "mi",
+    "explanation": "简谱 3 对应 mi。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0090",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "type": "JIANPU_NUMBER_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5 的唱名是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_01_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "do",
+      "re",
+      "mi",
+      "fa",
+      "sol",
+      "la",
+      "si"
+    ],
+    "answer": "sol",
+    "explanation": "简谱 5 对应 sol。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0091",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "1̇ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "高音1",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0092",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "2̇ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "高音2",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0093",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "5̇ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "高音5",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0094",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "1̣ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "低音1",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0095",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "3̣ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "低音3",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0096",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "6̣ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "低音6",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0097",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "5 和 5̇ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "5̇更高",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0098",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "3 和 3̣ 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "3更高",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0099",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "上方有点 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "高八度",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0100",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "type": "JIANPU_OCTAVE_CHOICE",
+    "difficulty": 1,
+    "prompt": "下方有点 表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_02_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "高音1",
+      "高音2",
+      "高音5",
+      "低音1",
+      "低音3",
+      "低音6",
+      "5̇更高",
+      "3更高",
+      "高八度",
+      "低八度"
+    ],
+    "answer": "低八度",
+    "explanation": "上方点表示更高，下方点表示更低。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0101",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "1拍",
+    "explanation": "5 的基础时值是 1拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0102",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5- 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "2拍",
+    "explanation": "5- 的基础时值是 2拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0103",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5-- 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "3拍",
+    "explanation": "5-- 的基础时值是 3拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0104",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5--- 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "4拍",
+    "explanation": "5--- 的基础时值是 4拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0105",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5. 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "1.5拍",
+    "explanation": "5. 的基础时值是 1.5拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0106",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5_ 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "半拍",
+    "explanation": "5_ 的基础时值是 半拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0107",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 0 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "休止1拍",
+    "explanation": "0 的基础时值是 休止1拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0108",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 0- 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "休止2拍",
+    "explanation": "0- 的基础时值是 休止2拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0109",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5 5 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "两个1拍",
+    "explanation": "5 5 的基础时值是 两个1拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0110",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "type": "JIANPU_RHYTHM_CHOICE",
+    "difficulty": 1,
+    "prompt": "简谱 5_5_ 通常表示什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_03_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1拍",
+      "2拍",
+      "3拍",
+      "4拍",
+      "1.5拍",
+      "半拍",
+      "休止1拍",
+      "休止2拍",
+      "两个1拍",
+      "两个半拍"
+    ],
+    "answer": "两个半拍",
+    "explanation": "5_5_ 的基础时值是 两个半拍。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0111",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "1 2 3 4 5 6 7 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "七声音阶",
+    "explanation": "1 2 3 4 5 6 7 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0112",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "1 2 3 5 6 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "五声音阶",
+    "explanation": "1 2 3 5 6 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0113",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "宫 商 角 徵 羽 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "五声音阶名称",
+    "explanation": "宫 商 角 徵 羽 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0114",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "1 2 3 5 6 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "不包含4和7",
+    "explanation": "1 2 3 5 6 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0115",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "1-2 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "全音",
+    "explanation": "1-2 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0116",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "3-4 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "半音",
+    "explanation": "3-4 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0117",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "7-1 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "半音",
+    "explanation": "7-1 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0118",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "五声音阶 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "更有中国音乐味",
+    "explanation": "五声音阶 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0119",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "七声音阶 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "包含1234567",
+    "explanation": "七声音阶 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0120",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "type": "SCALE_CHOICE",
+    "difficulty": 1,
+    "prompt": "宫对应 对应哪个说法？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_04_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "七声音阶",
+      "五声音阶",
+      "五声音阶名称",
+      "不包含4和7",
+      "全音",
+      "半音",
+      "更有中国音乐味",
+      "包含1234567",
+      "1"
+    ],
+    "answer": "1",
+    "explanation": "宫对应 是本关需要掌握的音阶知识。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0121",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "#4 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "比4高半音",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0122",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "♭7 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "比7低半音",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0123",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "1=C 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "do定在C",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0124",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "1=G 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "do定在G",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0125",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "同一旋律1=C和1=G 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "旋律轮廓相同但高低不同",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0126",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "1=D 比 1=C 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "整体更高",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0127",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "#4 和 ♭5 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "可能等音",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0128",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "1155665 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "小星星开头",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0129",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "1=C切到1=D 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "整体升高",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0130",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "type": "JIANPU_KEY_ACCIDENTAL_CHOICE",
+    "difficulty": 1,
+    "prompt": "调号 的正确理解是？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/jianpu_05_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "比4高半音",
+      "比7低半音",
+      "do定在C",
+      "do定在G",
+      "旋律轮廓相同但高低不同",
+      "整体更高",
+      "可能等音",
+      "小星星开头",
+      "整体升高",
+      "决定1的实际音高"
+    ],
+    "answer": "决定1的实际音高",
+    "explanation": "调号决定 1 的实际音高，升降号改变临时音高。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0131",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "上 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱字",
+    "explanation": "上 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0132",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "尺 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱字",
+    "explanation": "尺 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0133",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "工 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱字",
+    "explanation": "工 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0134",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "凡 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱字",
+    "explanation": "凡 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0135",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "六 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱字",
+    "explanation": "六 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0136",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "五 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱字",
+    "explanation": "五 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0137",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "乙 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱字",
+    "explanation": "乙 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0138",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "上 尺 工 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱片段",
+    "explanation": "上 尺 工 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0139",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "凡 六 五 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "工尺谱片段",
+    "explanation": "凡 六 五 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0140",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "type": "GONGCHE_CHAR_CHOICE",
+    "difficulty": 1,
+    "prompt": "乙 属于什么？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_01_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "工尺谱字",
+      "简谱数字",
+      "五线谱音符",
+      "节奏符号",
+      "工尺谱片段",
+      "传统记谱符号"
+    ],
+    "answer": "传统记谱符号",
+    "explanation": "乙 是工尺谱中的常见记谱内容。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0141",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "上 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "1",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0142",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "尺 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "2",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0143",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "工 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "3",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0144",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "凡 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "4",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0145",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "六 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "5",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0146",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "五 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "6",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0147",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "乙 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "7",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0148",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "上尺工 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "123",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0149",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "工凡六 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "345",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0150",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "type": "GONGCHE_MAPPING_CHOICE",
+    "difficulty": 1,
+    "prompt": "六五乙 大致对应哪个简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_02_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "123",
+      "345",
+      "567"
+    ],
+    "answer": "567",
+    "explanation": "本题采用入门版对应关系，后续可按教材体系调整。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0151",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“上尺工”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "1 2 3",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0152",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“工尺上”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "3 2 1",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0153",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“工凡六”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "3 4 5",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0154",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“六五乙”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "5 6 7",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0155",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“上上工工”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "1 1 3 3",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0156",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“六六五”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "5 5 6",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0157",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“上尺工凡”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "1 2 3 4",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0158",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“凡工尺上”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "4 3 2 1",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0159",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“上工六”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "1 3 5",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0160",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "type": "GONGCHE_MELODY_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱“六工上”对应哪段简谱？",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_03_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "1 2 3",
+      "3 2 1",
+      "3 4 5",
+      "5 6 7",
+      "1 1 3 3",
+      "5 5 6",
+      "1 2 3 4",
+      "4 3 2 1",
+      "1 3 5",
+      "5 3 1"
+    ],
+    "answer": "5 3 1",
+    "explanation": "几个工尺谱字连起来就能形成旋律。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0161",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "听：1 2 3，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_1.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "上尺工",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0162",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "听：3 2 1，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_2.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "工尺上",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0163",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "看：上工六，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_3.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "1 3 5",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0164",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "看：六工上，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_4.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "5 3 1",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0165",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "传统记谱可以，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_5.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "唱出来",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0166",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "工尺谱主要价值，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_6.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "传统音乐识谱",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0167",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "把上尺工排好，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_7.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "上-尺-工",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0168",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "把工尺上排好，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_8.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "工-尺-上",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0169",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "上尺工凡六，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_9.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "1 2 3 4 5",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  },
+  {
+    "id": "Q0170",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "type": "GONGCHE_CHALLENGE_CHOICE",
+    "difficulty": 1,
+    "prompt": "完成工尺谱徽章，请选择正确答案。",
+    "instruction": "完成后点击确认",
+    "assets": {
+      "image": "assets/images/gongche_04_10.svg",
+      "audio": ""
+    },
+    "interaction": {},
+    "options": [
+      "上尺工",
+      "工尺上",
+      "1 3 5",
+      "5 3 1",
+      "唱出来",
+      "传统音乐识谱",
+      "上-尺-工",
+      "工-尺-上",
+      "1 2 3 4 5",
+      "获得传统音乐徽章"
+    ],
+    "answer": "获得传统音乐徽章",
+    "explanation": "这是工尺谱路线的综合小挑战。",
+    "score": 1,
+    "uiHints": {
+      "showProgress": true,
+      "showConfirmButton": true,
+      "allowRetryAfterWrong": false
+    }
+  }
+]

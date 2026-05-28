@@ -1,0 +1,801 @@
+[
+  {
+    "id": "flow_staff_01",
+    "moduleId": "staff",
+    "chapterId": "staff_01",
+    "title": "五条线四个间",
+    "order": 1,
+    "route": "/theory/staff/staff_01",
+    "nodes": [
+      {
+        "id": "staff_01_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_01",
+        "required": true
+      },
+      {
+        "id": "staff_01_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0001",
+          "Q0002",
+          "Q0003",
+          "Q0004",
+          "Q0005",
+          "Q0006",
+          "Q0007",
+          "Q0008",
+          "Q0009",
+          "Q0010"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_01_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_staff_02",
+    "moduleId": "staff",
+    "chapterId": "staff_02",
+    "title": "高音谱号和中央C",
+    "order": 2,
+    "route": "/theory/staff/staff_02",
+    "nodes": [
+      {
+        "id": "staff_02_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_02",
+        "required": true
+      },
+      {
+        "id": "staff_02_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0011",
+          "Q0012",
+          "Q0013",
+          "Q0014",
+          "Q0015",
+          "Q0016",
+          "Q0017",
+          "Q0018",
+          "Q0019",
+          "Q0020"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_02_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_staff_03",
+    "moduleId": "staff",
+    "chapterId": "staff_03",
+    "title": "音名和唱名",
+    "order": 3,
+    "route": "/theory/staff/staff_03",
+    "nodes": [
+      {
+        "id": "staff_03_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_03",
+        "required": true
+      },
+      {
+        "id": "staff_03_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0021",
+          "Q0022",
+          "Q0023",
+          "Q0024",
+          "Q0025",
+          "Q0026",
+          "Q0027",
+          "Q0028",
+          "Q0029",
+          "Q0030"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_03_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_staff_04",
+    "moduleId": "staff",
+    "chapterId": "staff_04",
+    "title": "钢琴和五线谱",
+    "order": 4,
+    "route": "/theory/staff/staff_04",
+    "nodes": [
+      {
+        "id": "staff_04_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_04",
+        "required": true
+      },
+      {
+        "id": "staff_04_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0031",
+          "Q0032",
+          "Q0033",
+          "Q0034",
+          "Q0035",
+          "Q0036",
+          "Q0037",
+          "Q0038",
+          "Q0039",
+          "Q0040"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_04_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_staff_05",
+    "moduleId": "staff",
+    "chapterId": "staff_05",
+    "title": "全音和半音",
+    "order": 5,
+    "route": "/theory/staff/staff_05",
+    "nodes": [
+      {
+        "id": "staff_05_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_05",
+        "required": true
+      },
+      {
+        "id": "staff_05_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0041",
+          "Q0042",
+          "Q0043",
+          "Q0044",
+          "Q0045",
+          "Q0046",
+          "Q0047",
+          "Q0048",
+          "Q0049",
+          "Q0050"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_05_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_staff_06",
+    "moduleId": "staff",
+    "chapterId": "staff_06",
+    "title": "升降号和还原号",
+    "order": 6,
+    "route": "/theory/staff/staff_06",
+    "nodes": [
+      {
+        "id": "staff_06_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_06",
+        "required": true
+      },
+      {
+        "id": "staff_06_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0051",
+          "Q0052",
+          "Q0053",
+          "Q0054",
+          "Q0055",
+          "Q0056",
+          "Q0057",
+          "Q0058",
+          "Q0059",
+          "Q0060"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_06_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_staff_07",
+    "moduleId": "staff",
+    "chapterId": "staff_07",
+    "title": "五线谱节奏",
+    "order": 7,
+    "route": "/theory/staff/staff_07",
+    "nodes": [
+      {
+        "id": "staff_07_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_07",
+        "required": true
+      },
+      {
+        "id": "staff_07_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0061",
+          "Q0062",
+          "Q0063",
+          "Q0064",
+          "Q0065",
+          "Q0066",
+          "Q0067",
+          "Q0068",
+          "Q0069",
+          "Q0070"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_07_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_staff_08",
+    "moduleId": "staff",
+    "chapterId": "staff_08",
+    "title": "休止符和综合识谱",
+    "order": 8,
+    "route": "/theory/staff/staff_08",
+    "nodes": [
+      {
+        "id": "staff_08_teach",
+        "type": "teaching",
+        "lessonId": "teach_staff_08",
+        "required": true
+      },
+      {
+        "id": "staff_08_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0071",
+          "Q0072",
+          "Q0073",
+          "Q0074",
+          "Q0075",
+          "Q0076",
+          "Q0077",
+          "Q0078",
+          "Q0079",
+          "Q0080"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "staff_08_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_jianpu_01",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_01",
+    "title": "认识数字音符",
+    "order": 1,
+    "route": "/theory/jianpu/jianpu_01",
+    "nodes": [
+      {
+        "id": "jianpu_01_teach",
+        "type": "teaching",
+        "lessonId": "teach_jianpu_01",
+        "required": true
+      },
+      {
+        "id": "jianpu_01_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0081",
+          "Q0082",
+          "Q0083",
+          "Q0084",
+          "Q0085",
+          "Q0086",
+          "Q0087",
+          "Q0088",
+          "Q0089",
+          "Q0090"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "jianpu_01_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_jianpu_02",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_02",
+    "title": "高音点和低音点",
+    "order": 2,
+    "route": "/theory/jianpu/jianpu_02",
+    "nodes": [
+      {
+        "id": "jianpu_02_teach",
+        "type": "teaching",
+        "lessonId": "teach_jianpu_02",
+        "required": true
+      },
+      {
+        "id": "jianpu_02_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0091",
+          "Q0092",
+          "Q0093",
+          "Q0094",
+          "Q0095",
+          "Q0096",
+          "Q0097",
+          "Q0098",
+          "Q0099",
+          "Q0100"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "jianpu_02_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_jianpu_03",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_03",
+    "title": "简谱节奏和休止",
+    "order": 3,
+    "route": "/theory/jianpu/jianpu_03",
+    "nodes": [
+      {
+        "id": "jianpu_03_teach",
+        "type": "teaching",
+        "lessonId": "teach_jianpu_03",
+        "required": true
+      },
+      {
+        "id": "jianpu_03_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0101",
+          "Q0102",
+          "Q0103",
+          "Q0104",
+          "Q0105",
+          "Q0106",
+          "Q0107",
+          "Q0108",
+          "Q0109",
+          "Q0110"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "jianpu_03_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_jianpu_04",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_04",
+    "title": "音阶和五声音阶",
+    "order": 4,
+    "route": "/theory/jianpu/jianpu_04",
+    "nodes": [
+      {
+        "id": "jianpu_04_teach",
+        "type": "teaching",
+        "lessonId": "teach_jianpu_04",
+        "required": true
+      },
+      {
+        "id": "jianpu_04_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0111",
+          "Q0112",
+          "Q0113",
+          "Q0114",
+          "Q0115",
+          "Q0116",
+          "Q0117",
+          "Q0118",
+          "Q0119",
+          "Q0120"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "jianpu_04_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_jianpu_05",
+    "moduleId": "jianpu",
+    "chapterId": "jianpu_05",
+    "title": "简谱升降号和调号",
+    "order": 5,
+    "route": "/theory/jianpu/jianpu_05",
+    "nodes": [
+      {
+        "id": "jianpu_05_teach",
+        "type": "teaching",
+        "lessonId": "teach_jianpu_05",
+        "required": true
+      },
+      {
+        "id": "jianpu_05_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0121",
+          "Q0122",
+          "Q0123",
+          "Q0124",
+          "Q0125",
+          "Q0126",
+          "Q0127",
+          "Q0128",
+          "Q0129",
+          "Q0130"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "jianpu_05_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_gongche_01",
+    "moduleId": "gongche",
+    "chapterId": "gongche_01",
+    "title": "认识工尺谱字",
+    "order": 1,
+    "route": "/theory/gongche/gongche_01",
+    "nodes": [
+      {
+        "id": "gongche_01_teach",
+        "type": "teaching",
+        "lessonId": "teach_gongche_01",
+        "required": true
+      },
+      {
+        "id": "gongche_01_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0131",
+          "Q0132",
+          "Q0133",
+          "Q0134",
+          "Q0135",
+          "Q0136",
+          "Q0137",
+          "Q0138",
+          "Q0139",
+          "Q0140"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "gongche_01_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_gongche_02",
+    "moduleId": "gongche",
+    "chapterId": "gongche_02",
+    "title": "工尺谱和简谱对应",
+    "order": 2,
+    "route": "/theory/gongche/gongche_02",
+    "nodes": [
+      {
+        "id": "gongche_02_teach",
+        "type": "teaching",
+        "lessonId": "teach_gongche_02",
+        "required": true
+      },
+      {
+        "id": "gongche_02_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0141",
+          "Q0142",
+          "Q0143",
+          "Q0144",
+          "Q0145",
+          "Q0146",
+          "Q0147",
+          "Q0148",
+          "Q0149",
+          "Q0150"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "gongche_02_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_gongche_03",
+    "moduleId": "gongche",
+    "chapterId": "gongche_03",
+    "title": "工尺谱小旋律",
+    "order": 3,
+    "route": "/theory/gongche/gongche_03",
+    "nodes": [
+      {
+        "id": "gongche_03_teach",
+        "type": "teaching",
+        "lessonId": "teach_gongche_03",
+        "required": true
+      },
+      {
+        "id": "gongche_03_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0151",
+          "Q0152",
+          "Q0153",
+          "Q0154",
+          "Q0155",
+          "Q0156",
+          "Q0157",
+          "Q0158",
+          "Q0159",
+          "Q0160"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "gongche_03_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  },
+  {
+    "id": "flow_gongche_04",
+    "moduleId": "gongche",
+    "chapterId": "gongche_04",
+    "title": "文化小挑战",
+    "order": 4,
+    "route": "/theory/gongche/gongche_04",
+    "nodes": [
+      {
+        "id": "gongche_04_teach",
+        "type": "teaching",
+        "lessonId": "teach_gongche_04",
+        "required": true
+      },
+      {
+        "id": "gongche_04_practice",
+        "type": "practice",
+        "questionIds": [
+          "Q0161",
+          "Q0162",
+          "Q0163",
+          "Q0164",
+          "Q0165",
+          "Q0166",
+          "Q0167",
+          "Q0168",
+          "Q0169",
+          "Q0170"
+        ],
+        "required": true,
+        "questionCount": 10
+      },
+      {
+        "id": "gongche_04_result",
+        "type": "result",
+        "starRule": "default_10_question_rule",
+        "required": true
+      }
+    ],
+    "unlockNextWhen": {
+      "minStars": 2
+    },
+    "perfectRewardWhen": {
+      "stars": 3,
+      "effect": "sparkle_small"
+    }
+  }
+]

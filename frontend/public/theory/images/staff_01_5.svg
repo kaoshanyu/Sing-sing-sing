@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="280" viewBox="0 0 520 280">
+<rect width="100%" height="100%" rx="24" fill="#FFFDF9"/>
+<rect x="14" y="14" width="492" height="252" rx="18" fill="#FFFFFF" stroke="#E8DDD3" stroke-width="3"/>
+<text x="40" y="58" font-size="28" font-family="Arial, sans-serif" fill="#4B3D32" font-weight="700">五线谱位置</text>
+<text x="40" y="92" font-size="18" font-family="Arial, sans-serif" fill="#8B745F">请按提示找位置</text>
+<line x1="80" y1="120" x2="440" y2="120" stroke="#6B5A4D" stroke-width="2"/>
+<line x1="80" y1="144" x2="440" y2="144" stroke="#6B5A4D" stroke-width="2"/>
+<line x1="80" y1="168" x2="440" y2="168" stroke="#6B5A4D" stroke-width="2"/>
+<line x1="80" y1="192" x2="440" y2="192" stroke="#6B5A4D" stroke-width="2"/>
+<line x1="80" y1="216" x2="440" y2="216" stroke="#6B5A4D" stroke-width="2"/>
+<ellipse cx="250" cy="168" rx="18" ry="13" fill="#DDB29C" transform="rotate(-18 250 168)"/>
+<line x1="265" y1="166" x2="265" y2="96" stroke="#DDB29C" stroke-width="5"/>
+<text x="230" y="250" font-size="34" font-family="Arial" fill="#4B3D32">第三线</text>
+</svg>

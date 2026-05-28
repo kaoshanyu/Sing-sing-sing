@@ -1,0 +1,189 @@
+[
+  {
+    "id": "staff_01",
+    "moduleId": "staff",
+    "order": 1,
+    "title": "五条线四个间",
+    "subtitle": "先知道音符写在哪里",
+    "goal": "能分清线、间，并能点击指定位置",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "none"
+  },
+  {
+    "id": "staff_02",
+    "moduleId": "staff",
+    "order": 2,
+    "title": "高音谱号和中央C",
+    "subtitle": "找到最重要的起点音",
+    "goal": "能在五线谱上找到中央C",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "staff_03",
+    "moduleId": "staff",
+    "order": 3,
+    "title": "音名和唱名",
+    "subtitle": "CDE 对应 do re mi",
+    "goal": "能看五线谱音符选音名/唱名",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "staff_04",
+    "moduleId": "staff",
+    "order": 4,
+    "title": "钢琴和五线谱",
+    "subtitle": "按下琴键看到谱子",
+    "goal": "能把琴键、音名、五线谱位置对应起来",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "staff_05",
+    "moduleId": "staff",
+    "order": 5,
+    "title": "全音和半音",
+    "subtitle": "音高之间的距离",
+    "goal": "能判断两个相邻音是全音还是半音",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "staff_06",
+    "moduleId": "staff",
+    "order": 6,
+    "title": "升降号和还原号",
+    "subtitle": "音变高、变低、变回来",
+    "goal": "能识别 #、♭、♮ 的作用",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "staff_07",
+    "moduleId": "staff",
+    "order": 7,
+    "title": "五线谱节奏",
+    "subtitle": "一个音要唱多久",
+    "goal": "能看懂基础音符时值",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "staff_08",
+    "moduleId": "staff",
+    "order": 8,
+    "title": "休止符和综合识谱",
+    "subtitle": "有声音，也有停顿",
+    "goal": "能听/看简单旋律并选对谱子",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "jianpu_01",
+    "moduleId": "jianpu",
+    "order": 1,
+    "title": "认识数字音符",
+    "subtitle": "1 2 3 4 5 6 7",
+    "goal": "能把数字音符和唱名对应起来",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "none"
+  },
+  {
+    "id": "jianpu_02",
+    "moduleId": "jianpu",
+    "order": 2,
+    "title": "高音点和低音点",
+    "subtitle": "同一个数字也有高低",
+    "goal": "能判断上点、下点带来的高低变化",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "jianpu_03",
+    "moduleId": "jianpu",
+    "order": 3,
+    "title": "简谱节奏和休止",
+    "subtitle": "数字要唱多久，0 表示停",
+    "goal": "能看懂基础时值、附点和休止",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "jianpu_04",
+    "moduleId": "jianpu",
+    "order": 4,
+    "title": "音阶和五声音阶",
+    "subtitle": "从 1234567 到 12356",
+    "goal": "能识别七声音阶和五声音阶",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "jianpu_05",
+    "moduleId": "jianpu",
+    "order": 5,
+    "title": "简谱升降号和调号",
+    "subtitle": "#4、♭7、1=C",
+    "goal": "能理解临时升降号和调号带来的听感变化",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "gongche_01",
+    "moduleId": "gongche",
+    "order": 1,
+    "title": "认识工尺谱字",
+    "subtitle": "上、尺、工、凡、六、五、乙",
+    "goal": "能认出常见工尺谱字",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "jianpu_02_passed"
+  },
+  {
+    "id": "gongche_02",
+    "moduleId": "gongche",
+    "order": 2,
+    "title": "工尺谱和简谱对应",
+    "subtitle": "传统字谱也能对应音高",
+    "goal": "能把工尺谱字和简谱数字配对",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "gongche_03",
+    "moduleId": "gongche",
+    "order": 3,
+    "title": "工尺谱小旋律",
+    "subtitle": "几个字连起来就是旋律",
+    "goal": "能把短工尺谱转换成简谱",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  },
+  {
+    "id": "gongche_04",
+    "moduleId": "gongche",
+    "order": 4,
+    "title": "文化小挑战",
+    "subtitle": "传统记谱也可以唱出来",
+    "goal": "能完成工尺谱综合小练习",
+    "questionTarget": 10,
+    "passStars": 2,
+    "unlockRule": "previous_chapter_passed"
+  }
+]
