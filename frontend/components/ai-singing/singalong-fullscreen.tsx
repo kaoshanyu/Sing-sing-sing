@@ -400,10 +400,10 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
       <audio ref={recordAudioRef} className="hidden" />
 
       {/* Bottom controls */}
-      <div className="px-6 pb-6 pt-3 shrink-0 flex flex-col items-center gap-3">
-        {/* Volume controls */}
+      <div className="px-6 pb-6 pt-3 shrink-0 relative flex flex-col items-center">
+        {/* Volume controls — popup above buttons */}
         {showVolume && (
-          <div className="w-full max-w-sm bg-white/10 rounded-2xl p-3 space-y-2 animate-in slide-in-from-bottom-2">
+          <div className="absolute bottom-full mb-3 w-full max-w-sm bg-white/10 rounded-2xl p-3 space-y-2 animate-in slide-in-from-bottom-2">
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setAiEnabled(!aiEnabled)}
