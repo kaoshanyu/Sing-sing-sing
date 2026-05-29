@@ -282,7 +282,7 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
   }, [recordedTakes])
 
   return (
-    <div className="fixed inset-0 z-50 bg-background flex flex-col">
+    <div className="fixed inset-0 z-[100] bg-background flex flex-col">
       {/* Hidden audio for demo playback */}
       <audio
         ref={audioRef}
