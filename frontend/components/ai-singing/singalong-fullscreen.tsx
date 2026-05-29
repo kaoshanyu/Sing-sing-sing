@@ -146,8 +146,8 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
       barsRef.current = bars
 
       bars.forEach(bar => {
-        const barHeight = bar.height * 4
-        const y = centerY - barHeight / 2 + (bar.pitch - 0.5) * (h * 0.5)
+        const barHeight = bar.height * 5
+        const y = centerY - barHeight / 2 + (bar.pitch - 0.5) * (h * 0.7)
         const alpha = Math.min(1, bar.opacity * (playing ? 1.2 : 0.6))
         ctx.fillStyle = `rgba(232, 180, 160, ${alpha})`
         ctx.fillRect(bar.x, y, 4, barHeight)
@@ -303,54 +303,63 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
         </div>
       </div>
 
-      {/* Main area: canvas + lyrics overlay */}
-      <div className="flex-1 relative min-h-0">
-        <canvas
-          ref={canvasRef}
-          className="w-full h-full"
-        />
+      {/* Main area: pitch visualizer on top, lyrics below */}
+      <div className="flex-1 flex flex-col min-h-0">
+        {/* Pitch visualizer — thin strip */}
+        <div className="relative h-24 shrink-0">
+          <canvas
+            ref={canvasRef}
+            className="w-full h-full"
+          />
+        </div>
 
-        {/* Lyrics overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-8">
-          <div
-            ref={lyricsContainerRef}
-            className="w-full max-w-lg max-h-[60%] overflow-y-auto scrollbar-hide py-4"
-            style={{ scrollbarWidth: 'none' }}
-          >
-            {song.lyrics.map((line, i) => {
-              const isCurrent = i === currentLyricIndex && currentLyricIndex >= 0
-              const isPast = i < currentLyricIndex
-              const isUpcoming = i > currentLyricIndex
+        {/* Lyrics — remaining space */}
+        <div className="flex-1 relative min-h-0">
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-8">
+            <div
+              ref={lyricsContainerRef}
+              className="w-full max-w-lg max-h-full overflow-y-auto scrollbar-hide py-6"
+              style={{ scrollbarWidth: 'none' }}
+            >
+              {song.lyrics.length === 0 && (
+                <p className="text-base text-white/40 text-center">暂无歌词</p>
+              )}
+              {song.lyrics.map((line, i) => {
+                const isCurrent = i === currentLyricIndex && currentLyricIndex >= 0
+                const isPast = i < currentLyricIndex
+                const isUpcoming = i > currentLyricIndex
 
-              // Calculate how close to the current time this line is
-              const timeUntil = isUpcoming ? line.time - currentTime : 0
-              const opacity = isCurrent ? 1 : isPast ? 0.5 : Math.min(1, Math.max(0.2, 1 - timeUntil / 4))
-              const scale = isCurrent ? 1.1 : 0.9
+                const timeUntil = isUpcoming ? line.time - currentTime : 0
+                const opacity = isCurrent ? 1 : isPast ? 0.5 : Math.min(1, Math.max(0.2, 1 - timeUntil / 4))
+                const scale = isCurrent ? 1 : 0.85
 
-              return (
-                <div
-                  key={i}
-                  className="text-center transition-all duration-300 py-2"
-                  style={{
-                    opacity,
-                    transform: `scale(${scale})`,
-                  }}
-                >
-                  <p
-                    className={`font-bold transition-colors ${
-                      isCurrent
-                        ? 'text-white text-2xl'
-                        : isPast
-                        ? 'text-white/50 text-base'
-                        : 'text-white/30 text-base'
-                    }`}
+                return (
+                  <div
+                    key={i}
+                    className="text-center transition-all duration-300 py-2.5"
+                    style={{ opacity, transform: `scale(${scale})` }}
                   >
-                    {line.text}
-                  </p>
-                </div>
-              )
-            })}
+                    <p
+                      className={`font-bold transition-all duration-300 ${
+                        isCurrent
+                          ? 'text-white text-2xl drop-shadow-lg'
+                          : isPast
+                          ? 'text-white/40 text-base'
+                          : 'text-white/20 text-base'
+                      }`}
+                    >
+                      {line.text}
+                    </p>
+                    {/* Underline for current line — 全民K歌 style */}
+                    {isCurrent && (
+                      <div className="h-0.5 w-16 mx-auto mt-1.5 rounded-full bg-primary/60" />
+                    )}
+                  </div>
+                )
+              })}
+            </div>
           </div>
+
         </div>
       </div>
 
@@ -391,10 +400,10 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
       <audio ref={recordAudioRef} className="hidden" />
 
       {/* Bottom controls */}
-      <div className="px-6 pb-8 pt-4 shrink-0 flex flex-col items-center gap-4">
+      <div className="px-6 pb-6 pt-3 shrink-0 flex flex-col items-center gap-3">
         {/* Volume controls */}
         {showVolume && (
-          <div className="w-full max-w-sm bg-white/10 rounded-2xl p-4 space-y-3 animate-in slide-in-from-bottom-2">
+          <div className="w-full max-w-sm bg-white/10 rounded-2xl p-3 space-y-2 animate-in slide-in-from-bottom-2">
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setAiEnabled(!aiEnabled)}
@@ -444,48 +453,48 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
         )}
 
         {/* Main controls row */}
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-5">
           {/* Record button */}
           <button
             onClick={recording ? stopRecording : startRecording}
-            className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
+            className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
               recording
                 ? 'bg-destructive text-white scale-110 animate-pulse shadow-lg shadow-destructive/30'
                 : 'bg-white/10 text-white/70 hover:bg-white/20'
             }`}
           >
-            {recording ? <Square className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+            {recording ? <Square className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
           </button>
 
           {/* Volume toggle */}
           <button
             onClick={() => setShowVolume(v => !v)}
-            className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+            className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
           >
-            <Volume2 className="w-5 h-5 text-white/70" />
+            <Volume2 className="w-4 h-4 text-white/70" />
           </button>
 
           {/* Big play button */}
           <button
             onClick={togglePlay}
-            className="w-20 h-20 rounded-full bg-primary flex items-center justify-center
+            className="w-16 h-16 rounded-full bg-primary flex items-center justify-center
               hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/30"
           >
             {playing ? (
-              <Pause className="w-9 h-9 text-white" />
+              <Pause className="w-7 h-7 text-white" />
             ) : (
-              <Play className="w-9 h-9 text-white ml-1" />
+              <Play className="w-7 h-7 text-white ml-1" />
             )}
           </button>
 
           {/* AI领唱 toggle */}
           <button
             onClick={() => setAiEnabled(!aiEnabled)}
-            className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
+            className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors ${
               aiEnabled ? 'bg-primary/30 text-primary' : 'bg-white/10 text-white/50'
             }`}
           >
-            <Mic className="w-5 h-5" />
+            <Mic className="w-4 h-4" />
           </button>
 
           {/* Recording indicator */}
