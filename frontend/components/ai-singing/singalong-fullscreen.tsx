@@ -10,26 +10,22 @@ interface Props {
   onBack: () => void
 }
 
-// Generate a melody pattern (pitch values 0-1)
+// Generate a smooth melody contour (pitch values 0-1) with musical phrases
 function generateMelody(length: number): number[] {
   const melody: number[] = []
   let current = 0.5
+  let phrase = 0
   for (let i = 0; i < length; i++) {
-    current += (Math.random() - 0.5) * 0.3
-    current = Math.max(0.1, Math.min(0.9, current))
+    phrase += (Math.random() - 0.5) * 0.08
+    phrase = Math.max(-1, Math.min(1, phrase))
+    current += phrase * 0.02 + (Math.random() - 0.5) * 0.06
+    current = Math.max(0.15, Math.min(0.85, current))
     melody.push(current)
   }
   return melody
 }
 
 const MELODY = generateMelody(300)
-
-interface RollingBar {
-  x: number
-  pitch: number
-  height: number
-  opacity: number
-}
 
 interface RecordedTake {
   id: number
@@ -56,7 +52,6 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
   const scrollOffsetRef = useRef(0)
   const audioRef = useRef<HTMLAudioElement>(null)
   const timerRef = useRef<ReturnType<typeof setInterval>>()
-  const barsRef = useRef<RollingBar[]>([])
   const lyricsContainerRef = useRef<HTMLDivElement>(null)
 
   // Recording refs
@@ -80,22 +75,6 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
     return -1
   })()
 
-  // Initialize bars
-  useEffect(() => {
-    const bars: RollingBar[] = []
-    const barSpacing = 12
-    const count = Math.ceil(window.innerWidth / barSpacing) + 10
-    for (let i = 0; i < count; i++) {
-      bars.push({
-        x: i * barSpacing,
-        pitch: MELODY[i % MELODY.length],
-        height: 4 + Math.random() * 12,
-        opacity: 0.3 + Math.random() * 0.5,
-      })
-    }
-    barsRef.current = bars
-  }, [])
-
   // Auto-scroll lyrics to keep current line centered
   useEffect(() => {
     if (currentLyricIndex < 0 || !lyricsContainerRef.current) return
@@ -106,7 +85,7 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
     }
   }, [currentLyricIndex])
 
-  // Canvas animation loop
+  // Canvas animation loop — 全民K歌 style scrolling pitch contour
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -121,45 +100,81 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
     resize()
     window.addEventListener('resize', resize)
 
-    const barSpacing = 12
-    const speed = playing ? 1.8 : 0.3
+    // Pre-compute smooth pitch curve
+    const pitchPoints = MELODY.map((p, i, arr) => {
+      const prev = arr[Math.max(0, i - 1)]
+      const next = arr[Math.min(arr.length - 1, i + 1)]
+      return (prev + p + next) / 3
+    })
 
     const draw = () => {
       const w = canvas.clientWidth
       const h = canvas.clientHeight
       ctx.clearRect(0, 0, w, h)
 
-      scrollOffsetRef.current = (scrollOffsetRef.current + speed) % barSpacing
+      const speed = playing ? 1.2 : 0.2
+      scrollOffsetRef.current = (scrollOffsetRef.current + speed)
 
+      const stepX = w / 120
       const centerY = h / 2
-      const bars: RollingBar[] = []
-      const count = Math.ceil(w / barSpacing) + 4
-      for (let i = 0; i < count; i++) {
-        const idx = Math.floor((i * barSpacing + scrollOffsetRef.current) / barSpacing) % MELODY.length
-        bars.push({
-          x: i * barSpacing - (scrollOffsetRef.current % barSpacing),
-          pitch: MELODY[idx],
-          height: 4 + Math.random() * 12,
-          opacity: 0.3 + Math.random() * 0.4,
-        })
+      const rangeY = h * 0.6
+
+      // Center reference line
+      ctx.strokeStyle = 'rgba(232, 180, 160, 0.1)'
+      ctx.lineWidth = 1
+      ctx.setLineDash([3, 4])
+      ctx.beginPath()
+      ctx.moveTo(0, centerY)
+      ctx.lineTo(w, centerY)
+      ctx.stroke()
+      ctx.setLineDash([])
+
+      // Pitch contour — scrolls from right to left
+      const startIdx = Math.floor(scrollOffsetRef.current)
+      ctx.beginPath()
+      for (let i = 0; i <= w / stepX + 2; i++) {
+        const idx = Math.max(0, Math.min(pitchPoints.length - 1, startIdx + i))
+        const x = w - i * stepX
+        const y = centerY + (pitchPoints[idx] - 0.5) * rangeY
+        if (i === 0) ctx.moveTo(x, y)
+        else ctx.lineTo(x, y)
       }
-      barsRef.current = bars
 
-      bars.forEach(bar => {
-        const barHeight = bar.height * 5
-        const y = centerY - barHeight / 2 + (bar.pitch - 0.5) * (h * 0.7)
-        const alpha = Math.min(1, bar.opacity * (playing ? 1.2 : 0.6))
-        ctx.fillStyle = `rgba(232, 180, 160, ${alpha})`
-        ctx.fillRect(bar.x, y, 4, barHeight)
-      })
+      // Outer glow
+      ctx.shadowColor = 'rgba(232, 180, 160, 0.3)'
+      ctx.shadowBlur = 8
+      ctx.strokeStyle = '#E8B4A0'
+      ctx.lineWidth = 2.5
+      ctx.stroke()
 
+      // Inner bright line
+      ctx.shadowBlur = 0
+      ctx.strokeStyle = 'rgba(255, 220, 200, 0.6)'
+      ctx.lineWidth = 1.5
+      ctx.stroke()
+
+      // Vertical scan line at center
       if (playing) {
-        const grad = ctx.createLinearGradient(0, 0, 0, h)
+        const scanX = w / 2
+        const grad = ctx.createLinearGradient(scanX, 0, scanX, h)
         grad.addColorStop(0, 'transparent')
-        grad.addColorStop(0.5, 'rgba(232, 180, 160, 0.3)')
+        grad.addColorStop(0.3, 'rgba(232, 180, 160, 0.3)')
+        grad.addColorStop(0.5, 'rgba(232, 180, 160, 0.6)')
+        grad.addColorStop(0.7, 'rgba(232, 180, 160, 0.3)')
         grad.addColorStop(1, 'transparent')
         ctx.fillStyle = grad
-        ctx.fillRect(w / 2 - 1, 0, 2, h)
+        ctx.fillRect(scanX - 1.5, 0, 3, h)
+
+        // Bright dot on the pitch line at scan position
+        const beatIdx = Math.max(0, Math.min(pitchPoints.length - 1, startIdx + Math.floor(w / 2 / stepX)))
+        const dotY = centerY + (pitchPoints[beatIdx] - 0.5) * rangeY
+        ctx.shadowColor = 'rgba(232, 180, 160, 0.8)'
+        ctx.shadowBlur = 10
+        ctx.fillStyle = '#FFE8DD'
+        ctx.beginPath()
+        ctx.arc(w / 2, dotY, 3.5, 0, Math.PI * 2)
+        ctx.fill()
+        ctx.shadowBlur = 0
       }
 
       animRef.current = requestAnimationFrame(draw)
@@ -305,8 +320,8 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
 
       {/* Main area: pitch visualizer on top, lyrics below */}
       <div className="flex-1 flex flex-col min-h-0">
-        {/* Pitch visualizer — thin strip */}
-        <div className="relative h-24 shrink-0">
+        {/* Pitch visualizer — thin karaoke-style strip */}
+        <div className="relative h-14 shrink-0">
           <canvas
             ref={canvasRef}
             className="w-full h-full"
