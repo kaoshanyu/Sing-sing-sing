@@ -1,21 +1,17 @@
 "use client"
 
 import { useState, useEffect, useCallback, useRef } from "react"
-import { LevelConfig, useGame } from "@/lib/game-context"
 import { Button } from "./ui/button"
 import { Progress } from "./ui/progress"
 import {
   ArrowLeft,
   Play,
   Mic,
-  Volume2,
   Star,
   Heart,
   Check,
   X,
   RotateCcw,
-  ChevronRight,
-  Pause
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { apiCreateSession, apiSubmitAnswer, apiCompleteSession } from "@/lib/api"
@@ -376,7 +372,6 @@ export function TutorialPractice({
   useEffect(() => { resultsRef.current = results }, [results])
   const [hearts, setHearts] = useState(5) // 5颗心
   const [combo, setCombo] = useState(0)
-  const [score, setScore] = useState(0)
   const [startTime] = useState(Date.now())
   const [showFailed, setShowFailed] = useState(false)
   
@@ -394,7 +389,6 @@ export function TutorialPractice({
 
     if (correct) {
       setCombo(prev => prev + 1)
-      setScore(prev => prev + 1)
     } else {
       setCombo(0)
       setHearts(prev => {
@@ -579,7 +573,6 @@ export function TutorialPractice({
               setResults([])
               setHearts(5)
               setCombo(0)
-              setScore(0)
             }}
           >
             再来一轮

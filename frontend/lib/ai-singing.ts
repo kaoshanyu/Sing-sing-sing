@@ -127,15 +127,120 @@ const LYRICS_OCEAN = [
   { time: 25, text: "就像妈妈一样" },
 ]
 
+const LYRICS_TWINKLE = [
+  { time: 0, text: "Twinkle twinkle little star" },
+  { time: 4, text: "How I wonder what you are" },
+  { time: 8, text: "Up above the world so high" },
+  { time: 12, text: "Like a diamond in the sky" },
+]
+
+const LYRICS_JASMINE = [
+  { time: 0, text: "好一朵美丽的茉莉花" },
+  { time: 4, text: "好一朵美丽的茉莉花" },
+  { time: 8, text: "芬芳美丽满枝桠" },
+  { time: 12, text: "又香又白人人夸" },
+  { time: 16, text: "让我来将你摘下" },
+  { time: 20, text: "送给别人家" },
+  { time: 24, text: "茉莉花呀茉莉花" },
+]
+
+const LYRICS_LITTLE = [
+  { time: 0, text: "世上只有妈妈好" },
+  { time: 4, text: "有妈的孩子像个宝" },
+  { time: 8, text: "投进了妈妈的怀抱" },
+  { time: 12, text: "幸福享不了" },
+  { time: 16, text: "世上只有妈妈好" },
+  { time: 20, text: "没妈的孩子像根草" },
+  { time: 24, text: "离开妈妈的怀抱" },
+  { time: 28, text: "幸福哪里找" },
+]
+
+const LYRICS_FIND = [
+  { time: 0, text: "曾经在幽幽暗暗反反复复中追问" },
+  { time: 5, text: "才知道平平淡淡从从容容才是真" },
+  { time: 10, text: "再回首恍然如梦" },
+  { time: 13, text: "再回首我心依旧" },
+  { time: 16, text: "只有那无尽的长路伴着我" },
+]
+
 // ========== Mock Data ==========
 
 const MOCK_SONGS: Song[] = [
-  { id: 'moment', title: '瞬间的瞬间', artist: '本地示例歌曲', key: 'G', difficulty: '中高音', coverInitial: '瞬', status: 'ready', lyrics: LYRICS_MOMENT },
+  // 入门 — 简单旋律，适合初次练习
+  { id: 'twinkle', title: 'Twinkle Twinkle', artist: '经典儿歌', key: 'C', difficulty: '入门', coverInitial: 'T', status: 'ready', lyrics: LYRICS_TWINKLE },
+  { id: 'jasmine', title: '茉莉花', artist: '中国民歌', key: 'D', difficulty: '入门', coverInitial: '茉', status: 'ready', lyrics: LYRICS_JASMINE },
   { id: 'star', title: '小星星', artist: '儿歌精选', key: 'C', difficulty: '入门', coverInitial: '星', status: 'ready', lyrics: LYRICS_STAR },
-  { id: 'moon', title: '月亮代表我的心', artist: '经典金曲', key: 'F', difficulty: '中音', coverInitial: '月', status: 'ready', lyrics: LYRICS_MOON },
-  { id: 'river', title: '小河淌水', artist: '民歌集', key: 'D', difficulty: '高音', coverInitial: '河', status: 'needs_upload', lyrics: LYRICS_RIVER },
-  { id: 'ocean', title: '大海', artist: '流行金曲', key: 'A', difficulty: '中高音', coverInitial: '海', status: 'needs_upload', lyrics: LYRICS_OCEAN },
+  { id: 'little', title: '世上只有妈妈好', artist: '经典儿歌', key: 'C', difficulty: '入门', coverInitial: '妈', status: 'ready', lyrics: LYRICS_LITTLE },
+  // 中音 — 经典流行
+  { id: 'moon', title: '月亮代表我的心', artist: '邓丽君', key: 'F', difficulty: '中音', coverInitial: '月', status: 'ready', lyrics: LYRICS_MOON },
+  { id: 'ocean', title: '大海', artist: '张雨生', key: 'A', difficulty: '中音', coverInitial: '海', status: 'ready', lyrics: LYRICS_OCEAN },
+  { id: 'find', title: '再回首', artist: '姜育恒', key: 'G', difficulty: '中音', coverInitial: '再', status: 'ready', lyrics: LYRICS_FIND },
+  { id: 'moment', title: '瞬间的瞬间', artist: '示例歌曲', key: 'G', difficulty: '中音', coverInitial: '瞬', status: 'ready', lyrics: LYRICS_MOMENT },
+  // 高音 — 需要上传音源
+  { id: 'river', title: '小河淌水', artist: '云南民歌', key: 'D', difficulty: '高音', coverInitial: '河', status: 'needs_upload', lyrics: LYRICS_RIVER },
 ]
+
+// ========== Audio Generation ==========
+
+/** 生成一段简单的 demo 音频（WAV Blob） */
+export async function generateDemoAudio(durationSec = 30): Promise<Blob> {
+  const sampleRate = 44100
+  const numSamples = sampleRate * durationSec
+  const buffer = new ArrayBuffer(44 + numSamples * 2)
+  const view = new DataView(buffer)
+
+  // WAV header
+  const writeString = (offset: number, str: string) => {
+    for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i))
+  }
+  writeString(0, 'RIFF')
+  view.setUint32(4, 36 + numSamples * 2, true)
+  writeString(8, 'WAVE')
+  writeString(12, 'fmt ')
+  view.setUint32(16, 16, true)
+  view.setUint16(20, 1, true) // PCM
+  view.setUint16(22, 1, true) // mono
+  view.setUint32(24, sampleRate, true)
+  view.setUint32(28, sampleRate * 2, true)
+  view.setUint16(32, 2, true)
+  view.setUint16(34, 16, true)
+  writeString(36, 'data')
+  view.setUint32(40, numSamples * 2, true)
+
+  // 生成简单的旋律（C大调音阶片段循环）
+  const melody = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25] // C4-C5
+  const noteLen = sampleRate * 0.5 // 每个音 0.5 秒
+  const beatLen = sampleRate * 0.25
+
+  for (let i = 0; i < numSamples; i++) {
+    const noteIdx = Math.floor(i / noteLen) % melody.length
+    const freq = melody[noteIdx]
+    const t = i / sampleRate
+    const noteT = (i % noteLen) / noteLen
+
+    // 用多个泛音让音色更丰富
+    let sample = 0
+    sample += Math.sin(2 * Math.PI * freq * t) * 0.25
+    sample += Math.sin(2 * Math.PI * freq * 2 * t) * 0.08
+    sample += Math.sin(2 * Math.PI * freq * 3 * t) * 0.04
+
+    // 简单的包络
+    const attack = Math.min(1, noteT * 20)
+    const release = Math.min(1, (1 - noteT) * 10)
+    const envelope = Math.min(attack, release)
+
+    // 节拍伴奏（简单的鼓点）
+    const beatPhase = (i % beatLen) / beatLen
+    const kick = beatPhase < 0.1 ? Math.cos(beatPhase * 20) * 0.1 * (1 - beatPhase / 0.1) : 0
+
+    const val = (sample * envelope + kick) * 0.5
+    const clamped = Math.max(-1, Math.min(1, val))
+    const int16 = clamped < 0 ? clamped * 0x8000 : clamped * 0x7FFF
+    view.setInt16(44 + i * 2, int16, true)
+  }
+
+  return new Blob([buffer], { type: 'audio/wav' })
+}
 
 // ========== Mock API ==========
 
@@ -155,6 +260,15 @@ export function getDemoSongs(): Song[] {
   return MOCK_SONGS.filter(s => s.status === 'ready')
 }
 
+export function getDifficultyLabel(difficulty: string): string {
+  const labels: Record<string, string> = {
+    '入门': '🎯 新手友好',
+    '中音': '🎤 经典必唱',
+    '高音': '🔥 高手挑战',
+  }
+  return labels[difficulty] || difficulty
+}
+
 export async function apiConvertVoice(
   _material: VoiceMaterial,
   _song: Song,
@@ -171,13 +285,17 @@ export async function apiConvertVoice(
     onProgress?.(step.status)
   }
   onProgress?.('done')
+
+  // 生成真实的 demo 音频
+  const audioBlob = await generateDemoAudio(30)
+  const audioUrl = URL.createObjectURL(audioBlob)
   return {
     jobId: `job_${Date.now()}`,
     urls: {
-      final_mix: '/placeholder.mp3',
-      final_wav: '/placeholder.wav',
-      converted_vocal: '/placeholder.wav',
-      accompaniment: '/placeholder.wav',
+      final_mix: audioUrl,
+      final_wav: audioUrl,
+      converted_vocal: audioUrl,
+      accompaniment: audioUrl,
     },
   }
 }

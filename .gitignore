@@ -10,3 +10,4 @@ venv/
 backend/.env
 .vercel/
 *.tsbuildinfo
+.vercel

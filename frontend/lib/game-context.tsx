@@ -1,7 +1,7 @@
 "use client"
 
 import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react'
-import { apiLogin, apiRegister, apiSaveQuestionnaire, apiSaveVocalRange, apiResetProgress, apiGetUser } from './api'
+import { apiLogin, apiRegister, apiSaveQuestionnaire, apiSaveVocalRange, apiResetProgress } from './api'
 
 // 章节配置
 export const CHAPTERS = [
@@ -185,11 +185,20 @@ export interface UserProfile {
   hasCompletedOnboarding: boolean
   questionnaireAnswers: Record<string, string | string[]> | null
   assessmentResults: AssessmentResults | null
+  nickname?: string
   gender?: 'male' | 'female'
   vocalRange?: {
     lowest: string
     highest: string
   }
+}
+
+// 模块闯关等级配置（共享常量）
+export const LEVEL_CONFIG = {
+  STARTS: { L1: 0, L2: 250, L3: 550 } as Record<string, number>,
+  RANGES: { L1: 250, L2: 300, L3: 300 } as Record<string, number>,
+  LABELS: { L1: "基础级", L2: "进阶级", L3: "大师级" } as Record<string, string>,
+  LEVEL_NUM: { L1: 1, L2: 2, L3: 3 } as Record<string, number>,
 }
 
 // 初始进度

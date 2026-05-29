@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect, useCallback } from "react"
-import { ChevronLeft, Play, Pause, Mic, Music2, Volume2 } from "lucide-react"
+import { ChevronLeft, Play, Pause, Mic, Music2, Volume2, Square, RotateCcw } from "lucide-react"
 import type { Song, ConversionResult } from "@/lib/ai-singing"
 
 interface Props {
@@ -22,7 +22,6 @@ function generateMelody(length: number): number[] {
   return melody
 }
 
-// Pre-generate melody - use a seed-based approach for consistency
 const MELODY = generateMelody(300)
 
 interface RollingBar {
@@ -30,6 +29,12 @@ interface RollingBar {
   pitch: number
   height: number
   opacity: number
+}
+
+interface RecordedTake {
+  id: number
+  url: string
+  duration: number
 }
 
 export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
@@ -40,14 +45,40 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
   const [currentTime, setCurrentTime] = useState(0)
   const [showVolume, setShowVolume] = useState(false)
 
+  // Recording state
+  const [recording, setRecording] = useState(false)
+  const [recordTime, setRecordTime] = useState(0)
+  const [recordedTakes, setRecordedTakes] = useState<RecordedTake[]>([])
+  const [playingTakeId, setPlayingTakeId] = useState<number | null>(null)
+
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const animRef = useRef<number>(0)
   const scrollOffsetRef = useRef(0)
   const audioRef = useRef<HTMLAudioElement>(null)
   const timerRef = useRef<ReturnType<typeof setInterval>>()
   const barsRef = useRef<RollingBar[]>([])
+  const lyricsContainerRef = useRef<HTMLDivElement>(null)
 
-  const duration = 210 // seconds (mock)
+  // Recording refs
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null)
+  const chunksRef = useRef<Blob[]>([])
+  const recordTimerRef = useRef<ReturnType<typeof setInterval>>()
+  const recordStreamRef = useRef<MediaStream | null>(null)
+  const recordAudioRef = useRef<HTMLAudioElement>(null)
+  const takeIdRef = useRef(0)
+
+  const duration = song.lyrics.length > 0
+    ? Math.max(song.lyrics[song.lyrics.length - 1].time + 5, 30)
+    : 30
+
+  // Find current lyric line index
+  const currentLyricIndex = (() => {
+    const lyrics = song.lyrics
+    for (let i = lyrics.length - 1; i >= 0; i--) {
+      if (currentTime >= lyrics[i].time) return i
+    }
+    return -1
+  })()
 
   // Initialize bars
   useEffect(() => {
@@ -64,6 +95,16 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
     }
     barsRef.current = bars
   }, [])
+
+  // Auto-scroll lyrics to keep current line centered
+  useEffect(() => {
+    if (currentLyricIndex < 0 || !lyricsContainerRef.current) return
+    const container = lyricsContainerRef.current
+    const activeEl = container.children[currentLyricIndex] as HTMLElement
+    if (activeEl) {
+      activeEl.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    }
+  }, [currentLyricIndex])
 
   // Canvas animation loop
   useEffect(() => {
@@ -90,7 +131,6 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
 
       scrollOffsetRef.current = (scrollOffsetRef.current + speed) % barSpacing
 
-      // Update bar positions
       const centerY = h / 2
       const bars: RollingBar[] = []
       const count = Math.ceil(w / barSpacing) + 4
@@ -99,17 +139,11 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
         bars.push({
           x: i * barSpacing - (scrollOffsetRef.current % barSpacing),
           pitch: MELODY[idx],
-          height: 4 + Math.random() * 12, // slight variance
+          height: 4 + Math.random() * 12,
           opacity: 0.3 + Math.random() * 0.4,
         })
       }
       barsRef.current = bars
-
-      // Draw bars
-      const gradient = ctx.createLinearGradient(0, 0, 0, h)
-      gradient.addColorStop(0, 'rgba(232, 180, 160, 0.15)')
-      gradient.addColorStop(0.5, 'rgba(232, 180, 160, 0.6)')
-      gradient.addColorStop(1, 'rgba(168, 213, 186, 0.15)')
 
       bars.forEach(bar => {
         const barHeight = bar.height * 4
@@ -119,7 +153,6 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
         ctx.fillRect(bar.x, y, 4, barHeight)
       })
 
-      // Center glow line
       if (playing) {
         const grad = ctx.createLinearGradient(0, 0, 0, h)
         grad.addColorStop(0, 'transparent')
@@ -139,7 +172,7 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
     }
   }, [playing])
 
-  // Timer
+  // Timer for playback
   useEffect(() => {
     if (playing) {
       timerRef.current = setInterval(() => {
@@ -151,9 +184,26 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
     return () => clearInterval(timerRef.current)
   }, [playing, duration])
 
+  // Recording timer
+  useEffect(() => {
+    if (recording) {
+      recordTimerRef.current = setInterval(() => {
+        setRecordTime(t => t + 1)
+      }, 1000)
+    } else {
+      clearInterval(recordTimerRef.current)
+    }
+    return () => clearInterval(recordTimerRef.current)
+  }, [recording])
+
   const togglePlay = useCallback(() => {
+    if (playingTakeId !== null) {
+      // If a take is playing, stop it
+      recordAudioRef.current?.pause()
+      setPlayingTakeId(null)
+    }
     setPlaying(p => !p)
-  }, [])
+  }, [playingTakeId])
 
   const formatTime = (s: number) => {
     const m = Math.floor(s / 60)
@@ -163,9 +213,62 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
 
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0
 
+  // ===== Recording =====
+  const startRecording = useCallback(async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+      recordStreamRef.current = stream
+      chunksRef.current = []
+      const recorder = new MediaRecorder(stream)
+      mediaRecorderRef.current = recorder
+
+      recorder.ondataavailable = e => chunksRef.current.push(e.data)
+      recorder.onstop = () => {
+        const blob = new Blob(chunksRef.current, { type: 'audio/webm' })
+        const url = URL.createObjectURL(blob)
+        takeIdRef.current++
+        setRecordedTakes(prev => [...prev, {
+          id: takeIdRef.current,
+          url,
+          duration: recordTime,
+        }])
+        setRecordTime(0)
+        stream.getTracks().forEach(t => t.stop())
+        recordStreamRef.current = null
+      }
+
+      recorder.start()
+      setRecording(true)
+      setRecordTime(0)
+    } catch {
+      alert('需要麦克风权限才能录音')
+    }
+  }, [recordTime])
+
+  const stopRecording = useCallback(() => {
+    mediaRecorderRef.current?.stop()
+    setRecording(false)
+    clearInterval(recordTimerRef.current)
+  }, [])
+
+  const playTake = useCallback((take: RecordedTake) => {
+    if (recordAudioRef.current) {
+      recordAudioRef.current.src = take.url
+      recordAudioRef.current.play()
+      setPlayingTakeId(take.id)
+      recordAudioRef.current.onended = () => setPlayingTakeId(null)
+    }
+  }, [])
+
+  const clearTakes = useCallback(() => {
+    recordedTakes.forEach(t => URL.revokeObjectURL(t.url))
+    setRecordedTakes([])
+    setPlayingTakeId(null)
+  }, [recordedTakes])
+
   return (
     <div className="fixed inset-0 z-50 bg-gradient-to-b from-[#2A2420] to-[#1A1614] flex flex-col">
-      {/* Hidden audio */}
+      {/* Hidden audio for demo playback */}
       <audio
         ref={audioRef}
         src={conversionResult.urls.final_mix}
@@ -174,7 +277,7 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
       />
 
       {/* Top bar */}
-      <div className="px-4 pt-5 pb-3 flex items-center gap-3">
+      <div className="px-4 pt-5 pb-3 flex items-center gap-3 shrink-0">
         <button
           onClick={onBack}
           className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -183,7 +286,7 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
         </button>
         <div className="flex-1 text-center">
           <h1 className="text-base font-bold text-white">{song.title}</h1>
-          <p className="text-xs text-white/50">{song.artist}</p>
+          <p className="text-xs text-white/50">{song.artist} · {song.key}调</p>
         </div>
         <span className="text-xs text-white/60 font-mono">
           {formatTime(currentTime)} / {formatTime(duration)}
@@ -191,7 +294,7 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
       </div>
 
       {/* Progress bar */}
-      <div className="px-4 mb-2">
+      <div className="px-4 mb-2 shrink-0">
         <div className="h-1 rounded-full bg-white/10 overflow-hidden">
           <div
             className="h-full rounded-full bg-primary transition-all duration-1000"
@@ -200,42 +303,96 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
         </div>
       </div>
 
-      {/* Rolling pitch visualizer */}
-      <div className="flex-1 relative">
+      {/* Main area: canvas + lyrics overlay */}
+      <div className="flex-1 relative min-h-0">
         <canvas
           ref={canvasRef}
           className="w-full h-full"
         />
 
-        {/* Center lyrics area */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="text-center px-8">
-            {playing ? (
-              <div>
-                <p className="text-lg text-white/80 font-medium mb-2">用你的AI音色唱出这首歌</p>
-                <div className="flex items-center justify-center gap-1.5">
-                  {[1, 2, 3, 4, 5, 4, 3, 2, 1].map((h, i) => (
-                    <div
-                      key={i}
-                      className="w-1 bg-primary/80 rounded-full"
-                      style={{
-                        height: `${h * 4}px`,
-                        animation: `pulse-bar 0.6s ${i * 0.08}s infinite alternate`
-                      }}
-                    />
-                  ))}
+        {/* Lyrics overlay */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-8">
+          <div
+            ref={lyricsContainerRef}
+            className="w-full max-w-lg max-h-[60%] overflow-y-auto scrollbar-hide py-4"
+            style={{ scrollbarWidth: 'none' }}
+          >
+            {song.lyrics.map((line, i) => {
+              const isCurrent = i === currentLyricIndex && currentLyricIndex >= 0
+              const isPast = i < currentLyricIndex
+              const isUpcoming = i > currentLyricIndex
+
+              // Calculate how close to the current time this line is
+              const timeUntil = isUpcoming ? line.time - currentTime : 0
+              const opacity = isCurrent ? 1 : isPast ? 0.5 : Math.min(1, Math.max(0.2, 1 - timeUntil / 4))
+              const scale = isCurrent ? 1.1 : 0.9
+
+              return (
+                <div
+                  key={i}
+                  className="text-center transition-all duration-300 py-2"
+                  style={{
+                    opacity,
+                    transform: `scale(${scale})`,
+                  }}
+                >
+                  <p
+                    className={`font-bold transition-colors ${
+                      isCurrent
+                        ? 'text-white text-2xl'
+                        : isPast
+                        ? 'text-white/50 text-base'
+                        : 'text-white/30 text-base'
+                    }`}
+                  >
+                    {line.text}
+                  </p>
                 </div>
-              </div>
-            ) : (
-              <p className="text-base text-white/40">点击下方按钮开始跟唱</p>
-            )}
+              )
+            })}
           </div>
         </div>
       </div>
 
+      {/* Recorded takes bar */}
+      {recordedTakes.length > 0 && (
+        <div className="px-4 py-2 shrink-0">
+          <div className="bg-white/10 rounded-xl p-2">
+            <div className="flex items-center gap-2 overflow-x-auto">
+              {recordedTakes.map(take => {
+                const isPlaying = playingTakeId === take.id
+                return (
+                  <button
+                    key={take.id}
+                    onClick={() => isPlaying ? (recordAudioRef.current?.pause(), setPlayingTakeId(null)) : playTake(take)}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition-colors shrink-0 ${
+                      isPlaying
+                        ? 'bg-primary/30 text-primary'
+                        : 'bg-white/10 text-white/70 hover:bg-white/20'
+                    }`}
+                  >
+                    {isPlaying ? <Square className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                    录音 #{take.id} ({formatTime(take.duration)})
+                  </button>
+                )
+              })}
+              <button
+                onClick={clearTakes}
+                className="px-2 py-1.5 rounded-lg text-xs text-white/40 hover:text-white/70 hover:bg-white/10 transition-colors shrink-0"
+              >
+                <RotateCcw className="w-3 h-3" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Hidden audio for take playback */}
+      <audio ref={recordAudioRef} className="hidden" />
+
       {/* Bottom controls */}
-      <div className="px-6 pb-8 pt-4 flex flex-col items-center gap-4">
-        {/* Volume controls (expandable) */}
+      <div className="px-6 pb-8 pt-4 shrink-0 flex flex-col items-center gap-4">
+        {/* Volume controls */}
         {showVolume && (
           <div className="w-full max-w-sm bg-white/10 rounded-2xl p-4 space-y-3 animate-in slide-in-from-bottom-2">
             <div className="flex items-center gap-3">
@@ -287,7 +444,19 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
         )}
 
         {/* Main controls row */}
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex items-center justify-center gap-6">
+          {/* Record button */}
+          <button
+            onClick={recording ? stopRecording : startRecording}
+            className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
+              recording
+                ? 'bg-destructive text-white scale-110 animate-pulse shadow-lg shadow-destructive/30'
+                : 'bg-white/10 text-white/70 hover:bg-white/20'
+            }`}
+          >
+            {recording ? <Square className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+          </button>
+
           {/* Volume toggle */}
           <button
             onClick={() => setShowVolume(v => !v)}
@@ -296,7 +465,7 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
             <Volume2 className="w-5 h-5 text-white/70" />
           </button>
 
-          {/* Big play button - 全民K歌 style */}
+          {/* Big play button */}
           <button
             onClick={togglePlay}
             className="w-20 h-20 rounded-full bg-primary flex items-center justify-center
@@ -318,6 +487,14 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
           >
             <Mic className="w-5 h-5" />
           </button>
+
+          {/* Recording indicator */}
+          {recording && (
+            <div className="flex items-center gap-1.5 text-xs text-destructive">
+              <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
+              {formatTime(recordTime)}
+            </div>
+          )}
         </div>
       </div>
     </div>

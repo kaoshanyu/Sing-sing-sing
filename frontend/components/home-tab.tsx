@@ -1,6 +1,6 @@
 "use client"
 
-import { useGame, CHAPTERS } from "@/lib/game-context"
+import { useGame, CHAPTERS, LEVEL_CONFIG } from "@/lib/game-context"
 import type { Level } from "@/lib/question-engine"
 import { classifyVoiceType, type VoiceTypeInfo } from "@/lib/voice-type"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
@@ -435,10 +435,8 @@ export function HomeTab({ onStartAssessment, onOpenSingTI, onOpenVocalRangeTest,
                   const isMastered = state.masteredLevels.includes('L3')
                   // 等级内进度：根据积分估算当前等级内的完成度
                   const pct = isMastered ? 100 : (() => {
-                    const starts: Record<string, number> = { L1: 0, L2: 250, L3: 550 }
-                    const ranges: Record<string, number> = { L1: 250, L2: 300, L3: 300 }
-                    const inLevel = Math.max(0, Math.min(ranges[state.currentLevel] || 250, state.points - (starts[state.currentLevel] || 0)))
-                    return Math.round((inLevel / (ranges[state.currentLevel] || 250)) * 100)
+                    const inLevel = Math.max(0, Math.min(LEVEL_CONFIG.RANGES[state.currentLevel] || 250, state.points - (LEVEL_CONFIG.STARTS[state.currentLevel] || 0)))
+                    return Math.round((inLevel / (LEVEL_CONFIG.RANGES[state.currentLevel] || 250)) * 100)
                   })()
                   return (
                     <div key={mod.id} className="flex items-center gap-3">

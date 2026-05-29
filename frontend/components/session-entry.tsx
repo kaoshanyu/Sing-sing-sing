@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Sparkles, Zap, Trophy, Flame, ChevronLeft, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { LEVEL_CONFIG } from "@/lib/game-context"
 import { Button } from "@/components/ui/button"
 
 export type ModuleLevel = "L1" | "L2" | "L3"
@@ -41,10 +42,8 @@ export function SessionEntry({
   onBack,
 }: SessionEntryProps) {
   // 等级内进度：根据累计积分估算当前等级内的进度
-  const LEVEL_STARTS: Record<ModuleLevel, number> = { L1: 0, L2: 250, L3: 550 }
-  const LEVEL_RANGES: Record<ModuleLevel, number> = { L1: 250, L2: 300, L3: 300 }
-  const inLevelPoints = Math.max(0, Math.min(LEVEL_RANGES[currentLevel], points - LEVEL_STARTS[currentLevel]))
-  const progress = Math.round((inLevelPoints / LEVEL_RANGES[currentLevel]) * 100)
+  const inLevelPoints = Math.max(0, Math.min(LEVEL_CONFIG.RANGES[currentLevel], points - LEVEL_CONFIG.STARTS[currentLevel]))
+  const progress = Math.round((inLevelPoints / LEVEL_CONFIG.RANGES[currentLevel]) * 100)
   const masteredCount = masteredLevels.length
 
   return (

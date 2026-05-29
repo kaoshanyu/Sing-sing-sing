@@ -1,10 +1,10 @@
 "use client"
 
 import { useState, useCallback, useEffect, useRef } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+import { Card, CardContent } from "./ui/card"
 import { Button } from "./ui/button"
 import {
-  Lock, Star, BookOpen, Music, ChevronLeft, ChevronRight, Crown, Check, X, RefreshCw, RotateCcw,
+  Lock, Star, BookOpen, Music, ChevronLeft, ChevronRight, Crown, Check, X, RefreshCw,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useGame } from "@/lib/game-context"
@@ -15,8 +15,6 @@ import chaptersData from "@/lib/theory/questionbank/data/chapters.json"
 import lessonFlowData from "@/lib/theory/questionbank/data/lessonFlow.json"
 import teachingLessonsData from "@/lib/theory/questionbank/data/teachingLessons.json"
 import questionsData from "@/lib/theory/questionbank/data/questions.json"
-import pageConfigData from "@/lib/theory/questionbank/data/pageConfig.json"
-import uiRoutesData from "@/lib/theory/questionbank/data/uiRoutes.json"
 import rewardConfigData from "@/lib/theory/questionbank/data/rewardConfig.json"
 
 import type {

@@ -2,7 +2,7 @@
 
 import { useGame } from "@/lib/game-context"
 import { cn } from "@/lib/utils"
-import { BookOpen, Music2, Mic2, User } from "lucide-react"
+import { BookOpen, Music2, Mic2, User, Sparkles } from "lucide-react"
 
 const tabs = [
   {
@@ -22,6 +22,12 @@ const tabs = [
     label: 'AI导师',
     icon: Mic2,
     description: '智能语音指导',
+  },
+  {
+    id: 'ai-song' as const,
+    label: 'AI唱',
+    icon: Sparkles,
+    description: 'AI音色领唱',
   },
   {
     id: 'home' as const,

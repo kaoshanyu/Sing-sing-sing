@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
-import { LevelConfig, useGame } from "@/lib/game-context"
+import { LevelConfig, useGame, LEVEL_CONFIG } from "@/lib/game-context"
 import { Ear, Music, Timer, Mic, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { TutorialPractice } from "./tutorial-practice"
@@ -116,13 +116,10 @@ export function TutorialMap({ onStartLevel, onOpenRhythmTraining }: TutorialMapP
     // Use localStorage level state for module progress
     if (['pitch-recognition', 'interval-dictation', 'listen-and-sing'].includes(moduleId)) {
       const state = loadModuleState(moduleId)
-      const levelOrder: Record<string, number> = { L1: 1, L2: 2, L3: 3 }
-      const levelNum = levelOrder[state.currentLevel] || 1
+      const levelNum = LEVEL_CONFIG.LEVEL_NUM[state.currentLevel] || 1
       // 等级内进度：根据积分估算当前等级内的完成度
-      const LEVEL_STARTS: Record<string, number> = { L1: 0, L2: 250, L3: 550 }
-      const LEVEL_RANGES: Record<string, number> = { L1: 250, L2: 300, L3: 300 }
-      const inLevelPoints = Math.max(0, Math.min(LEVEL_RANGES[state.currentLevel] || 250, state.points - (LEVEL_STARTS[state.currentLevel] || 0)))
-      const percentage = Math.min(100, Math.round((inLevelPoints / (LEVEL_RANGES[state.currentLevel] || 250)) * 100))
+      const inLevelPoints = Math.max(0, Math.min(LEVEL_CONFIG.RANGES[state.currentLevel] || 250, state.points - (LEVEL_CONFIG.STARTS[state.currentLevel] || 0)))
+      const percentage = Math.min(100, Math.round((inLevelPoints / (LEVEL_CONFIG.RANGES[state.currentLevel] || 250)) * 100))
       return { percentage, level: levelNum }
     }
     switch (moduleId) {
@@ -202,7 +199,7 @@ export function TutorialMap({ onStartLevel, onOpenRhythmTraining }: TutorialMapP
       ...moduleLevelState,
       currentLevel: result.nextLevel,
       points: moduleLevelState.points + result.pointsEarned,
-      masteredLevels: moduleLevelState.currentLevel === 'L3' && !result.shouldDemote && records.filter(r => r.isCorrect).length / records.length >= 0.85
+      masteredLevels: result.nextLevel === 'L3' && !result.shouldDemote && records.filter(r => r.isCorrect).length / records.length >= 0.85
         ? moduleLevelState.masteredLevels.includes('L3' as Level)
           ? moduleLevelState.masteredLevels
           : [...moduleLevelState.masteredLevels, 'L3' as Level]
@@ -249,7 +246,7 @@ export function TutorialMap({ onStartLevel, onOpenRhythmTraining }: TutorialMapP
         moduleColor={activeModule.iconColor}
         currentLevel={moduleLevelState.currentLevel as ModuleLevel}
         points={moduleLevelState.points}
-        streak={0}
+        streak={progress.streak}
         masteredLevels={moduleLevelState.masteredLevels as ModuleLevel[]}
         onStart={handleStartPractice}
         onBack={handleBackToList}

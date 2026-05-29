@@ -23,7 +23,7 @@ export function LevelComplete({
   onNext,
   onHome,
 }: LevelCompleteProps) {
-  const { getChapterProgress, getLevelProgress } = useGame()
+  const { getChapterProgress } = useGame()
   const chapter = CHAPTERS.find(c => c.id === level.chapterId)
   const chapterProgress = getChapterProgress(level.chapterId)
   const [showConfetti, setShowConfetti] = useState(false)

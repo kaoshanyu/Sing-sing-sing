@@ -6,7 +6,6 @@ import { PitchVisualizer } from "./pitch-visualizer"
 import { Button } from "./ui/button"
 import { Progress } from "./ui/progress"
 import {
-  ArrowLeft,
   Play,
   Mic,
   Square,
@@ -236,7 +235,6 @@ export function PracticeSession({ level, onComplete, onExit }: PracticeSessionPr
   const [practiceLog, setPracticeLog] = useState<string[]>([])
   const [feedbackMessage, setFeedbackMessage] = useState<string>('')
   const [hearts, setHearts] = useState(5)
-  const [backendCorrectCount, setBackendCorrectCount] = useState(0)
 
   const audioContextRef = useRef<AudioContext | null>(null)
   const analyserRef = useRef<AnalyserNode | null>(null)

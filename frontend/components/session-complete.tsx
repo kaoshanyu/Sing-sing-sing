@@ -37,7 +37,7 @@ function Confetti() {
             duration: p.duration,
             delay: p.delay,
             ease: "easeIn",
-            repeat: Infinity,
+            repeat: 2,
             repeatDelay: 2,
           }}
         />
