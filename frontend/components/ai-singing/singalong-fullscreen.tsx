@@ -199,6 +199,17 @@ export function SingalongFullScreen({ song, conversionResult, onBack }: Props) {
     return () => clearInterval(timerRef.current)
   }, [playing, duration])
 
+  // Audio playback
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+    if (playing) {
+      audio.play().catch(() => {})
+    } else {
+      audio.pause()
+    }
+  }, [playing])
+
   // Recording timer
   useEffect(() => {
     if (recording) {
