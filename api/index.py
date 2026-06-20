@@ -1,6 +1,5 @@
-"""Vercel ASGI entry point for FastAPI backend."""
+"""Vercel serverless entry point for FastAPI backend."""
 import sys
-import traceback
 from pathlib import Path
 
 # Add backend directory to Python path
@@ -12,11 +11,5 @@ import os
 os.environ["ENV"] = "production"
 os.environ["VERCEL"] = "1"
 
-# Import FastAPI app with detailed error logging
-try:
-    from main import app
-    print("FastAPI app imported successfully", file=sys.stderr)
-except Exception:
-    print("FATAL: FastAPI app import failed", file=sys.stderr)
-    traceback.print_exc(file=sys.stderr)
-    raise
+# Import FastAPI app - Vercel Python runtime detects `app` as ASGI handler
+from main import app
