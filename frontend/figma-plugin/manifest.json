@@ -1,0 +1,10 @@
+{
+  "name": "五音不全 - 数据管理",
+  "id": "sing-sing-sing-manager",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/index.html",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": ["figma"]
+}

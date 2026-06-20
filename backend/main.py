@@ -59,6 +59,7 @@ async def global_exception_handler(request: Request, exc: Exception) -> JSONResp
     )
     response = ApiResponse.error(error)
     return JSONResponse(status_code=500, content=response.model_dump())
+@app.get(f"{API_PREFIX}/health")
 @app.get("/health")
 async def health_check():
     return ApiResponse.success(data={"status": "healthy"})

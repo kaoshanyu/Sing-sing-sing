@@ -1,0 +1,27 @@
+{
+  "name": "sing-sing-sing-manager",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build:ui": "vite build",
+    "build:code": "esbuild src/code.ts --bundle --outfile=dist/code.js --format=esm",
+    "build": "npm run build:ui && npm run build:code"
+  },
+  "dependencies": {
+    "lucide-react": "^0.564.0",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.100.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.3.0",
+    "esbuild": "^0.24.0",
+    "typescript": "5.7.3",
+    "vite": "^6.0.0",
+    "vite-plugin-singlefile": "^2.0.0"
+  }
+}
