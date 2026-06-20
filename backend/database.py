@@ -6,7 +6,9 @@ from sqlalchemy.orm import Session, sessionmaker
 from sqlmodel import SQLModel
 
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./app.db")
+# On Vercel serverless, use /tmp for writable storage
+_DEFAULT_DB = "sqlite:////tmp/app.db" if os.getenv("VERCEL") else "sqlite:///./app.db"
+DATABASE_URL = os.getenv("DATABASE_URL", _DEFAULT_DB)
 
 if DATABASE_URL.startswith("sqlite"):
     engine = create_engine(
