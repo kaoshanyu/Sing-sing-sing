@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
@@ -14,12 +15,13 @@ from routers.ai_chat_router import router as ai_chat_router
 from routers.auth_router import router as auth_router
 from routers.files_router import router as files_router
 from routers.quiz_sessions_router import router as quiz_sessions_router
+from routers.rhythm_router import router as rhythm_router
 from routers.singing_records_router import router as singing_records_router
 from routers.songs_router import router as songs_router
 from routers.users_router import router as users_router
 
 STATIC_MOUNT_PATH = "/static"
-STATIC_STORAGE_DIR = "static/"
+STATIC_STORAGE_DIR = Path(__file__).resolve().parent / "static"
 os.makedirs(STATIC_STORAGE_DIR, exist_ok=True)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -46,7 +48,8 @@ app.include_router(songs_router, prefix=f"{API_PREFIX}", tags=["songs"])
 app.include_router(singing_records_router, prefix=f"{API_PREFIX}", tags=["singing_records"])
 app.include_router(files_router, prefix=f"{API_PREFIX}", tags=["files"])
 app.include_router(ai_chat_router, prefix=f"{API_PREFIX}", tags=["ai_chat"])
-app.mount(STATIC_MOUNT_PATH, StaticFiles(directory=STATIC_STORAGE_DIR), name="static")
+app.include_router(rhythm_router, prefix=f"{API_PREFIX}", tags=["rhythm"])
+app.mount(STATIC_MOUNT_PATH, StaticFiles(directory=str(STATIC_STORAGE_DIR)), name="static")
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception) -> JSONResponse:
     error = Error(

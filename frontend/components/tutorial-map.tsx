@@ -42,8 +42,8 @@ const TUTORIAL_MODULES: TutorialModule[] = [
     title: '节奏训练',
     subtitle: '掌握稳定的节奏感',
     icon: Timer,
-    iconBgColor: '#E6E4FF',
-    iconColor: '#8B7FD4',
+    iconBgColor: '#F5EDE8',
+    iconColor: '#B88B6A',
   },
   {
     id: 'listen-and-sing',

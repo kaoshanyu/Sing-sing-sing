@@ -33,7 +33,7 @@ import { CharacterAvatar } from "./singti/character-avatar"
 const HOME_MODULES = [
   { id: 'pitch-recognition', title: '音高听辩', color: '#E8956A', bgColor: '#FFE4D6' },
   { id: 'interval-dictation', title: '音程听写', color: '#5AB88A', bgColor: '#D6F5E6' },
-  { id: 'rhythm-training', title: '节奏训练', color: '#8B7FD4', bgColor: '#E6E4FF' },
+  { id: 'rhythm-training', title: '节奏训练', color: '#B88B6A', bgColor: '#F5EDE8' },
   { id: 'listen-and-sing', title: '听音跟唱', color: '#E87FA0', bgColor: '#FFE4EC' },
   { id: 'ai-song-learning', title: 'AI+音色整曲学习', color: '#5AAAE8', bgColor: '#E4F4FF' },
 ]

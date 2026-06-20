@@ -4,6 +4,14 @@ import { getGrade } from './types'
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || ''
 const API_PREFIX = '/api/v1'
 
+function getToken(): string | null {
+  try {
+    return localStorage.getItem('auth_token')
+  } catch {
+    return null
+  }
+}
+
 // ===== Mock Data =====
 
 const MOCK_UNITS: Unit[] = [
@@ -38,7 +46,7 @@ function mockLevels(unitId: number): Level[] {
 
 const QUESTION_TYPES_FOR_UNIT: Record<number, string[]> = {
   1: ['RHYTHM_CLASSIFICATION', 'ACCENT_DETECTION'],
-  2: ['RHYTHM_PUZZLE'],
+  2: ['RHYTHM_ECHO'],
   3: ['UPBEAT_TRAINING', 'SIGHT_READING'],
   4: ['SPOT_THE_BUG', 'METRIC_MODULATION'],
   5: ['SPLIT_BRAIN', 'ANTI_DISTRACTION'],
@@ -72,6 +80,7 @@ function mockQuestion(levelId: number): Question {
     base.question_payload = { options: ['2/4', '3/4', '4/4'] }
   } else if (qType === 'RHYTHM_PUZZLE') {
     base.question_payload = {
+      count_options: [3, 4, 5, 6],
       note_pool: [
         { note_id: 'n1', note_type: 'WHOLE', duration_ms: 2000 },
         { note_id: 'n2', note_type: 'HALF', duration_ms: 1000 },
@@ -81,6 +90,14 @@ function mockQuestion(levelId: number): Question {
         { note_id: 'n6', note_type: 'REST', duration_ms: 500 },
       ],
     }
+  } else if (qType === 'RHYTHM_ECHO') {
+    base.question_payload = {
+      echo_steps: [0, 4, 6, 8],
+      grid_steps: 16,
+      skill_goal: '跟着目标节奏点击。',
+      prompt: '目标音出现时点击，空拍时不要点。',
+    }
+    base.expected_hit_times_ms = [0, 1200, 1800, 2400]
   } else if (qType === 'SIGHT_READING') {
     base.question_payload = {
       score_sheet: [
@@ -130,16 +147,23 @@ const MOCK_AUDIO_TRACKS: AudioTrack[] = [
 // ===== API Client =====
 
 async function apiGet<T>(path: string): Promise<T> {
-  const res = await fetch(`${API_BASE}${API_PREFIX}${path}`)
+  const token = getToken()
+  const res = await fetch(`${API_BASE}${API_PREFIX}${path}`, {
+    headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+  })
   const body = await res.json()
   if (body.code !== 0) throw new Error(body.detail || '请求失败')
   return body.data as T
 }
 
 async function apiPost<T>(path: string, data?: any): Promise<T> {
+  const token = getToken()
   const res = await fetch(`${API_BASE}${API_PREFIX}${path}`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
     body: data ? JSON.stringify(data) : undefined,
   })
   const body = await res.json()

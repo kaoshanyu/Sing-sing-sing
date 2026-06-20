@@ -11,3 +11,4 @@ backend/.env
 .vercel/
 *.tsbuildinfo
 .vercel
+logs/

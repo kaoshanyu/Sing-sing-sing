@@ -27,6 +27,7 @@ export type QuestionType =
   | 'RHYTHM_CLASSIFICATION'
   | 'ACCENT_DETECTION'
   | 'RHYTHM_PUZZLE'
+  | 'RHYTHM_ECHO'
   | 'UPBEAT_TRAINING'
   | 'SIGHT_READING'
   | 'SPOT_THE_BUG'
@@ -49,9 +50,22 @@ export interface Question {
 
 export interface QuestionPayload {
   options?: string[]
+  count_options?: number[]
+  target_label?: string
+  name?: string
+  prompt?: string
+  skill_goal?: string
+  echo_steps?: number[]
+  grid_steps?: number
   note_pool?: NotePoolItem[]
+  pattern_options?: PatternOption[]
   score_sheet?: ScoreNote[]
   available_instruments?: number[]
+  groove_presets?: GroovePreset[]
+  step_count?: number
+  loop_duration_ms?: number
+  quantize_grid_ms?: number
+  quantize_grid_timestamps_ms?: number[]
 }
 
 export interface NotePoolItem {
@@ -62,10 +76,24 @@ export interface NotePoolItem {
 
 export type NoteType = 'WHOLE' | 'HALF' | 'QUARTER' | 'EIGHTH' | 'SIXTEENTH' | 'REST'
 
+export interface PatternOption {
+  pattern_id: string
+  label: string
+  sequence: NoteType[]
+  grid_steps: number
+  hit_steps: number[]
+}
+
 export interface ScoreNote {
   note_type: NoteType
   start_ms: number
   duration_ms?: number
+}
+
+export interface GroovePreset {
+  preset_id: string
+  name: string
+  tracks: { instrument_id: number; steps: number[] }[]
 }
 
 // ===== 提交请求 =====
@@ -79,6 +107,8 @@ export interface SubmitHitTimestamps {
 
 export interface SubmitPuzzleNotes {
   selected_notes: { note_id: string; note_type: NoteType; position: number }[]
+  selected_pattern?: string
+  selected_count?: number
 }
 
 export interface SubmitSpotBug {
@@ -147,7 +177,8 @@ export type GameState = 'loading' | 'ready' | 'playing' | 'stopped' | 'submittin
 export const QUESTION_TYPE_NAMES: Record<QuestionType, string> = {
   RHYTHM_CLASSIFICATION: '律动分类帽',
   ACCENT_DETECTION: '重音识别',
-  RHYTHM_PUZZLE: '节奏拼图',
+  RHYTHM_PUZZLE: '节奏计数',
+  RHYTHM_ECHO: '节奏回声',
   UPBEAT_TRAINING: '反拍训练',
   SIGHT_READING: '视奏跑酷',
   SPOT_THE_BUG: '听音纠错',
@@ -160,14 +191,15 @@ export const QUESTION_TYPE_NAMES: Record<QuestionType, string> = {
 export const QUESTION_TYPE_DESCRIPTIONS: Record<QuestionType, string> = {
   RHYTHM_CLASSIFICATION: '系统会播放一段音乐，你需要判断它是几拍子的。2/4 拍像进行曲，3/4 拍像华尔兹，4/4 拍是流行乐最常见的节奏。',
   ACCENT_DETECTION: '系统播放节拍器，你需要在每小节第一拍（强拍）点击屏幕。跟着强拍的节奏，准确地点击下去！',
-  RHYTHM_PUZZLE: '听到一段节奏后，从音符池中选择正确的音符块，把它们填满小节。注意时值的组合要准确哦！',
+  RHYTHM_PUZZLE: '听完整段节奏后，判断目标音一共出现了几次。先抓住稳定脉搏，再数更明亮的目标音。',
+  RHYTHM_ECHO: '听到目标节奏就跟着点击，把长短、休止和密集节奏转化成身体反应。',
   UPBEAT_TRAINING: '背景会持续播放底鼓（强拍），你需要在两个底鼓之间的反拍位置点击。感受反拍的律动！',
   SIGHT_READING: '乐谱从右向左滚动，当音符经过判定线时点击。就像音乐游戏一样！',
   SPOT_THE_BUG: '系统显示乐谱并播放音频，但音频中某个音符被替换了。找出那个听起来和看起来不一样的音符。',
   METRIC_MODULATION: '底鼓速度不变，但你需要根据屏幕提示瞬间切换敲击密度。从一种节奏无缝切换到另一种！',
   SPLIT_BRAIN: '双手独立操作！屏幕一分为二，左右手分别打出不同的节奏型。挑战你的协调能力！',
   ANTI_DISTRACTION: '清晰底鼓循环中，只打强拍和次强拍。忽略干扰音轨，保持专注！',
-  PRODUCER_SANDBOX: '在背景音乐上叠加录制多轨打击乐。选择乐器，按节奏点击，创建属于你的节奏 Loop！',
+  PRODUCER_SANDBOX: '像编曲软件一样点亮鼓组网格，也可以套用模板后再改出自己的节奏 Loop。',
 }
 
 // ===== 评级配置 =====
