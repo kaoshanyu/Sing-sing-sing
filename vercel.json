@@ -1,4 +1,14 @@
 {
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python@3.1.0",
+      "config": {
+        "maxDuration": 30,
+        "includeFiles": "backend/**"
+      }
+    }
+  ],
   "rewrites": [
     { "source": "/api/v1/(.*)", "destination": "/api/index.py" },
     { "source": "/api/v1/", "destination": "/api/index.py" },
