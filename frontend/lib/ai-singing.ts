@@ -181,7 +181,7 @@ const MOCK_SONGS: Song[] = [
   { id: 'moon', title: '月亮代表我的心', artist: '邓丽君', key: 'F', difficulty: '中音', coverInitial: '月', status: 'ready', lyrics: LYRICS_MOON },
   { id: 'ocean', title: '大海', artist: '张雨生', key: 'A', difficulty: '中音', coverInitial: '海', status: 'ready', lyrics: LYRICS_OCEAN },
   { id: 'find', title: '再回首', artist: '姜育恒', key: 'G', difficulty: '中音', coverInitial: '再', status: 'ready', lyrics: LYRICS_FIND },
-  { id: 'moment', title: '瞬间的瞬间', artist: '示例歌曲', key: 'G', difficulty: '中音', coverInitial: '瞬', status: 'ready', lyrics: LYRICS_MOMENT },
+  { id: 'moment', title: '瞬间的瞬间', artist: '示例歌曲', key: 'G', difficulty: '中音', coverInitial: '瞬', status: 'ready', lyrics: LYRICS_MOMENT, accompanimentUrl: '/static/songs/moment/accompaniment.mp3', vocalsUrl: '/static/songs/moment/vocals.mp3', previewUrl: '/static/songs/moment/preview.mp3' },
   // 高音 — 需要上传音源
   { id: 'river', title: '小河淌水', artist: '云南民歌', key: 'D', difficulty: '高音', coverInitial: '河', status: 'needs_upload', lyrics: LYRICS_RIVER },
 ]
