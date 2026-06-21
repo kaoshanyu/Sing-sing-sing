@@ -75,11 +75,9 @@ export function AiSingingTab({ onBack }: AiSingingTabProps) {
   const handleDirectSing = useCallback(async () => {
     if (!selectedSong) return
 
-    const baseUrl = process.env.NEXT_PUBLIC_VOICE_API_URL || 'https://unopposed-flyaway-unthawed.ngrok-free.dev'
-
     if (selectedSong.accompanimentUrl) {
-      // Use real audio file
-      const url = `${baseUrl}${selectedSong.accompanimentUrl}`
+      // Use real audio file (absolute path, same origin — works on Vercel)
+      const url = selectedSong.accompanimentUrl
       setDirectAudioUrl(url)
       setConversionResult({
         jobId: 'direct',
