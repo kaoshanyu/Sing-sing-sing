@@ -1,11 +1,13 @@
 {
-  "functions": {
-    "api/index.py": {
-      "runtime": "@vercel/python@6.47.0",
-      "maxDuration": 30,
-      "includeFiles": "backend/**"
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": "backend/**"
+      }
     }
-  },
+  ],
   "rewrites": [
     { "source": "/api/v1/(.*)", "destination": "/api/index.py" },
     { "source": "/api/v1/", "destination": "/api/index.py" },
