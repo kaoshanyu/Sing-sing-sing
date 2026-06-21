@@ -71,21 +71,40 @@ export function AiSingingTab({ onBack }: AiSingingTabProps) {
     setStep('singing')
   }, [])
 
-  // Direct mode: skip straight to singalong
+  // Direct mode: use real accompaniment if available, otherwise generate demo
   const handleDirectSing = useCallback(async () => {
     if (!selectedSong) return
-    const blob = await generateDemoAudio(30)
-    const url = URL.createObjectURL(blob)
-    setDirectAudioUrl(url)
-    setConversionResult({
-      jobId: 'direct',
-      urls: {
-        final_mix: url,
-        final_wav: url,
-        converted_vocal: url,
-        accompaniment: url,
-      },
-    })
+
+    const baseUrl = process.env.NEXT_PUBLIC_VOICE_API_URL || 'https://unopposed-flyaway-unthawed.ngrok-free.dev'
+
+    if (selectedSong.accompanimentUrl) {
+      // Use real audio file
+      const url = `${baseUrl}${selectedSong.accompanimentUrl}`
+      setDirectAudioUrl(url)
+      setConversionResult({
+        jobId: 'direct',
+        urls: {
+          final_mix: url,
+          final_wav: url,
+          converted_vocal: url,
+          accompaniment: url,
+        },
+      })
+    } else {
+      // Fallback to generated demo
+      const blob = await generateDemoAudio(30)
+      const url = URL.createObjectURL(blob)
+      setDirectAudioUrl(url)
+      setConversionResult({
+        jobId: 'direct',
+        urls: {
+          final_mix: url,
+          final_wav: url,
+          converted_vocal: url,
+          accompaniment: url,
+        },
+      })
+    }
     setStep('singing')
   }, [selectedSong])
 

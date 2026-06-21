@@ -46,6 +46,11 @@ static_voice_dir = VOICE_DATA_DIR
 os.makedirs(static_voice_dir, exist_ok=True)
 app.mount("/static/voice", StaticFiles(directory=str(static_voice_dir)), name="voice_static")
 
+# Serve song audio files (茉莉花, etc.)
+songs_static_dir = BACKEND_DIR / "static" / "songs"
+os.makedirs(songs_static_dir, exist_ok=True)
+app.mount("/static/songs", StaticFiles(directory=str(songs_static_dir)), name="songs_static")
+
 
 @app.get(f"{API_PREFIX}/health")
 @app.get("/health")

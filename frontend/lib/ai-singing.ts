@@ -24,6 +24,12 @@ export interface Song {
   coverInitial: string
   status: 'ready' | 'needs_upload'
   lyrics: LyricLine[]
+  /** URL to accompaniment audio (karaoke version) */
+  accompanimentUrl?: string
+  /** URL to original vocal audio */
+  vocalsUrl?: string
+  /** URL to preview audio */
+  previewUrl?: string
 }
 
 export interface ConversionUrls {
@@ -168,7 +174,7 @@ const LYRICS_FIND = [
 const MOCK_SONGS: Song[] = [
   // 入门 — 简单旋律，适合初次练习
   { id: 'twinkle', title: 'Twinkle Twinkle', artist: '经典儿歌', key: 'C', difficulty: '入门', coverInitial: 'T', status: 'ready', lyrics: LYRICS_TWINKLE },
-  { id: 'jasmine', title: '茉莉花', artist: '中国民歌', key: 'D', difficulty: '入门', coverInitial: '茉', status: 'ready', lyrics: LYRICS_JASMINE },
+  { id: 'jasmine', title: '茉莉花', artist: '宋祖英', key: 'D', difficulty: '入门', coverInitial: '茉', status: 'ready', lyrics: LYRICS_JASMINE, accompanimentUrl: '/static/songs/jasmine/accompaniment.mp3', vocalsUrl: '/static/songs/jasmine/vocals.mp3', previewUrl: '/static/songs/jasmine/preview.mp3' },
   { id: 'star', title: '小星星', artist: '儿歌精选', key: 'C', difficulty: '入门', coverInitial: '星', status: 'ready', lyrics: LYRICS_STAR },
   { id: 'little', title: '世上只有妈妈好', artist: '经典儿歌', key: 'C', difficulty: '入门', coverInitial: '妈', status: 'ready', lyrics: LYRICS_LITTLE },
   // 中音 — 经典流行
