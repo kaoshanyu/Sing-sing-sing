@@ -4,8 +4,6 @@ import os
 from all_enums import AccuracyLevelEnum
 from fastapi import UploadFile
 from result_response import Result, create_validation_error, create_internal_error
-import librosa
-import numpy as np
 
 from depends.storage import save_uploaded_file as storage_save_file
 
@@ -41,6 +39,10 @@ class FilesService:
         Returns dict with keys: score (int 0-100), stars_earned (int 0-3),
         feedback_data (dict with syllables list and overall_pitch_accuracy float).
         """
+        # Lazy imports to avoid loading heavy packages at module level (for Vercel)
+        import librosa  # noqa: F401
+        import numpy as np  # noqa: F401
+
         try:
             if not os.path.exists(file_path):
                 return Result.from_error(create_validation_error(f"Audio file not found: {file_path}"))
