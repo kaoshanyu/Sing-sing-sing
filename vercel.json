@@ -1,6 +1,13 @@
 {
   "builds": [
     {
+      "src": "frontend/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "rootDirectory": "frontend"
+      }
+    },
+    {
       "src": "api/index.py",
       "use": "@vercel/python",
       "config": {
