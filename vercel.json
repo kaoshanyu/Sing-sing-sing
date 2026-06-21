@@ -1,14 +1,1 @@
-{
-  "functions": {
-    "api/index.py": {
-      "runtime": "vercel-python@3.0.0",
-      "maxDuration": 30,
-      "includeFiles": "backend/**"
-    }
-  },
-  "rewrites": [
-    { "source": "/api/v1/(.*)", "destination": "/api/index.py" },
-    { "source": "/api/v1/", "destination": "/api/index.py" },
-    { "source": "/static/(.*)", "destination": "/api/index.py" }
-  ]
-}
+{}
