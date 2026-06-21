@@ -274,7 +274,7 @@ export async function apiConvertVoice(
   song: Song,
   onProgress?: (status: ConversionStatus) => void,
 ): Promise<ConversionResult> {
-  const VOICE_SERVER = process.env.NEXT_PUBLIC_VOICE_API_URL || 'http://localhost:8001'
+  const VOICE_SERVER = process.env.NEXT_PUBLIC_VOICE_API_URL || 'https://unopposed-flyaway-unthawed.ngrok-free.dev'
   const VOICE_PREFIX = '/api/v1'
 
   // Check if voice server is available
