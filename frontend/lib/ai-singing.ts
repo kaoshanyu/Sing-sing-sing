@@ -270,10 +270,76 @@ export function getDifficultyLabel(difficulty: string): string {
 }
 
 export async function apiConvertVoice(
-  _material: VoiceMaterial,
-  _song: Song,
+  material: VoiceMaterial,
+  song: Song,
   onProgress?: (status: ConversionStatus) => void,
 ): Promise<ConversionResult> {
+  const VOICE_SERVER = process.env.NEXT_PUBLIC_VOICE_API_URL || 'http://localhost:8001'
+  const VOICE_PREFIX = '/api/v1'
+
+  // Check if voice server is available
+  let serverAvailable = false
+  try {
+    const healthRes = await fetch(`${VOICE_SERVER}/health`, { signal: AbortSignal.timeout(2000) })
+    serverAvailable = healthRes.ok
+  } catch {
+    // Server not running
+  }
+
+  if (serverAvailable) {
+    // ===== Real voice server pipeline =====
+    onProgress?.('preparing')
+
+    // 1. Upload voice material as tone profile
+    onProgress?.('extracting')
+    const profileForm = new FormData()
+    profileForm.append('file', material.file, material.name.endsWith('.webm') ? 'recording.webm' : 'reference_voice.wav')
+    profileForm.append('name', 'default')
+    const profileRes = await fetch(`${VOICE_SERVER}${VOICE_PREFIX}/voice/profile`, {
+      method: 'POST',
+      body: profileForm,
+    })
+    const profileBody = await profileRes.json()
+    if (profileBody.code !== 0) {
+      throw new Error(profileBody.detail || '音色档案创建失败')
+    }
+
+    // 2. Generate demo audio and convert it
+    onProgress?.('processing')
+    const demoBlob = await generateDemoAudio(30)
+    const convertForm = new FormData()
+    convertForm.append('vocals', demoBlob, 'target_vocals.wav')
+    convertForm.append('profile_name', 'default')
+    convertForm.append('strength', '0.72')
+    const convertRes = await fetch(`${VOICE_SERVER}${VOICE_PREFIX}/voice/convert`, {
+      method: 'POST',
+      body: convertForm,
+    })
+    const convertBody = await convertRes.json()
+    if (convertBody.code !== 0) {
+      throw new Error(convertBody.detail || '音色转换失败')
+    }
+
+    onProgress?.('mixing')
+    // Wait a moment for mixing to finalize
+    await new Promise(r => setTimeout(r, 500))
+
+    onProgress?.('done')
+    const data = convertBody.data
+    // Build full URLs for the audio files
+    const baseUrl = VOICE_SERVER
+    return {
+      jobId: `job_${Date.now()}`,
+      urls: {
+        final_mix: data.mixed_url ? `${baseUrl}${data.mixed_url}` : `${baseUrl}${data.converted_vocals_url}`,
+        final_wav: `${baseUrl}${data.converted_vocals_url}`,
+        converted_vocal: `${baseUrl}${data.converted_vocals_url}`,
+        accompaniment: '',
+      },
+    }
+  }
+
+  // ===== Fallback: mock conversion =====
   const steps: { status: ConversionStatus; delay: number }[] = [
     { status: 'preparing', delay: 600 },
     { status: 'extracting', delay: 800 },
@@ -286,7 +352,6 @@ export async function apiConvertVoice(
   }
   onProgress?.('done')
 
-  // 生成真实的 demo 音频
   const audioBlob = await generateDemoAudio(30)
   const audioUrl = URL.createObjectURL(audioBlob)
   return {

@@ -8,3 +8,7 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+
+# Voice conversion data (audio uploads/outputs)
+voice_data/*
+!voice_data/.gitkeep

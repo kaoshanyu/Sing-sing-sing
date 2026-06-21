@@ -170,3 +170,75 @@ export async function apiChat(message: string, history: { role: string; content:
   if (body.code !== 0) throw new Error(body.detail || 'AI服务不可用')
   return body.data.response as string
 }
+
+// ========== Voice Conversion (local server :8001) ==========
+
+const VOICE_SERVER = process.env.NEXT_PUBLIC_VOICE_API_URL || 'http://localhost:8001'
+const VOICE_PREFIX = '/api/v1'
+
+export async function apiVoiceStatus() {
+  const res = await fetch(`${VOICE_SERVER}${VOICE_PREFIX}/voice/status`)
+  const body = await res.json()
+  if (body.code !== 0) throw new Error(body.detail || '语音服务不可用')
+  return body.data
+}
+
+export async function apiVoiceProfiles() {
+  const res = await fetch(`${VOICE_SERVER}${VOICE_PREFIX}/voice/profiles`)
+  const body = await res.json()
+  if (body.code !== 0) throw new Error(body.detail || '获取音色档案失败')
+  return body.data
+}
+
+export async function apiCreateVoiceProfile(file: File, name: string = 'default') {
+  const formData = new FormData()
+  formData.append('file', file)
+  formData.append('name', name)
+  const res = await fetch(`${VOICE_SERVER}${VOICE_PREFIX}/voice/profile`, {
+    method: 'POST',
+    body: formData,
+  })
+  const body = await res.json()
+  if (body.code !== 0) throw new Error(body.detail || '创建音色档案失败')
+  return body.data
+}
+
+export async function apiVoiceConvert(
+  vocals: File,
+  accompaniment?: File | null,
+  profileName: string = 'default',
+  strength: number = 0.72,
+) {
+  const formData = new FormData()
+  formData.append('vocals', vocals)
+  if (accompaniment) formData.append('accompaniment', accompaniment)
+  formData.append('profile_name', profileName)
+  formData.append('strength', String(strength))
+  const res = await fetch(`${VOICE_SERVER}${VOICE_PREFIX}/voice/convert`, {
+    method: 'POST',
+    body: formData,
+  })
+  const body = await res.json()
+  if (body.code !== 0) throw new Error(body.detail || '音色转换失败')
+  return body.data
+}
+
+export async function apiSeedVCConvert(
+  source: File,
+  refPrompt: File,
+  diffusionSteps: number = 8,
+  cfgRate: number = 0.8,
+) {
+  const formData = new FormData()
+  formData.append('source', source)
+  formData.append('reference_prompt', refPrompt)
+  formData.append('diffusion_steps', String(diffusionSteps))
+  formData.append('cfg_rate', String(cfgRate))
+  const res = await fetch(`${VOICE_SERVER}${VOICE_PREFIX}/voice/seedvc/convert`, {
+    method: 'POST',
+    body: formData,
+  })
+  const body = await res.json()
+  if (body.code !== 0) throw new Error(body.detail || 'Seed-VC转换失败')
+  return body.data
+}

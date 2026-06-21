@@ -1,0 +1,11 @@
+# Voice conversion server dependencies (local only, not for Vercel)
+# Install with: pip install -r voice-requirements.txt
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.0
+scipy>=1.10.0
+
+# For Seed-VC (optional, needs PyTorch)
+# torch>=2.0.0
+# torchaudio>=2.0.0
