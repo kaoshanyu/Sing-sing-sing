@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/index.py": {
-      "runtime": "python3.12",
+      "runtime": "@vercel/python@6.47.0",
       "maxDuration": 30,
       "includeFiles": "backend/**"
     }
