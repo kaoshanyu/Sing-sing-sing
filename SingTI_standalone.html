@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#FDF8F3">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>SingTI 音乐人格测试</title>
 <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -87,6 +90,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 </style>
 </head>
 <body>
+<script>(function(){// cache bust for WeChat built-in browser
+var v='v=';if(location.search.indexOf(v)<0&&location.hash.indexOf(v)<0){
+var t=new Date().getTime();location.replace(location.pathname+'?'+v+t+location.hash);}})();</script>
 <div id="root"></div>
 <script type="text/babel">
 // ===== DATA =====
