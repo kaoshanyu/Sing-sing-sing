@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#FDF8F3">
+<title>SingTI 音乐人格测试</title>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react@19/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@19/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FDF8F3;
+  --fg:#4A3728;
+  --card:#FFF;
+  --card-fg:#4A3728;
+  --primary:#E8B4A0;
+  --primary-fg:#FFF;
+  --secondary:#F5EDE8;
+  --secondary-fg:#6B5344;
+  --muted:#F5EDE8;
+  --muted-fg:#8B7355;
+  --accent:#A8D5BA;
+  --accent-fg:#2D5A3D;
+  --border:#E8DDD5;
+  --radius:1rem;
+  --star-gold:#FFD700;
+  --star-empty:#E8DDD5;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",sans-serif;
+  background:var(--bg);color:var(--fg);
+  min-height:100vh;-webkit-font-smoothing:antialiased;
+}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+.app{min-height:100vh;max-width:480px;margin:0 auto;display:flex;flex-direction:column}
+/* Animations */
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
+@keyframes wave{0%,100%{height:8px}50%{height:36px}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.anim-fade{animation:fadeIn .4s ease-out}
+.anim-slide{animation:slideIn .25s ease-out}
+.anim-scale{animation:scaleIn .4s ease-out}
+.anim-float{animation:float 3s ease-in-out infinite}
+.wave-bar{animation:wave .7s ease-in-out infinite;width:6px;background:var(--primary);border-radius:3px}
+/* UI */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border-radius:1rem;font-size:1rem;font-weight:600;padding:14px 24px;
+  transition:all .2s;width:100%}
+.btn-primary{background:var(--primary);color:var(--primary-fg)}
+.btn-primary:hover{opacity:.85}
+.btn-primary:active{transform:scale(.97)}
+.btn-outline{background:var(--card);color:var(--fg);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--primary)}
+.btn-destructive{background:#E8A0A0;color:#fff}
+.btn-disabled{opacity:.5;pointer-events:none}
+.btn-lg{padding:16px 24px;font-size:1.05rem;border-radius:1rem}
+.btn-sm{padding:10px 14px;font-size:.85rem;border-radius:.75rem}
+/* Progress */
+.progress{height:6px;background:var(--secondary);border-radius:3px;overflow:hidden}
+.progress-bar{height:100%;background:var(--primary);border-radius:3px;transition:width .3s ease}
+/* Card */
+.card{background:var(--card);border:1px solid var(--border);border-radius:1.5rem}
+/* Glass */
+.glass{background:rgba(255,255,255,.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.3)}
+/* Option button */
+.opt-btn{width:100%;padding:18px 20px;border-radius:1rem;text-align:left;font-size:.95rem;font-weight:500;
+  border:2px solid var(--border);background:var(--card);transition:all .2s;color:var(--fg);line-height:1.4}
+.opt-btn:hover{border-color:var(--primary)}
+.opt-btn.selected{border-color:var(--primary);background:rgba(232,180,160,.1)}
+.opt-label{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;
+  background:var(--secondary);font-size:.75rem;font-weight:700;color:var(--muted-fg);margin-right:12px;flex-shrink:0}
+.opt-btn.selected .opt-label{background:var(--primary);color:var(--primary-fg)}
+/* Badge */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:999px;font-size:.7rem;font-weight:500}
+/* Back button */
+.back-btn{width:36px;height:36px;border-radius:50%;background:var(--card);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;transition:all .15s}
+.back-btn:hover{background:var(--secondary)}
+/* Shareable card */
+.share-card{border-radius:1.5rem;overflow:hidden;background:var(--card);border:1px solid var(--border)}
+.share-card-inner{padding:28px;text-align:center}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+// ===== DATA =====
+const PERSONALITIES = [
+  {id:1,name:"音准稽查官",tagline:"你唱的不是歌，是精准度",description:"你唱歌像在执法。别人唱歌要钱，你唱歌要命——每一个走音都逃不过你的耳朵。KTV里你是行走的调音器，你一张嘴，包间安静得能听见针掉在地上。朋友说你像在唱听力考试，你说这叫专业素养。和你合唱是种修行，因为你会认真复盘每一个人的每一个音。",dims:[0,0,1,0]},
+  {id:2,name:"即兴拆迁队",tagline:"原曲是什么？我没听过",description:"原旋律到你嘴里就是一顿爆改。《小星星》能让你唱成 Dubstep Remix，《生日快乐》能改成爵士版。好不好听是概率问题，但一定很热闹是你的确定性。朋友们最大的愿望是听你好好唱完一次，而你的回答永远是：不可能，那多无聊。",dims:[0,0,1,1]},
+  {id:3,name:"人形指挥台",tagline:"你的节奏，就是世界的节奏",description:"你唱歌像在指挥交响乐，每个字都有它的位置。跟你合唱的人自动进入你的节奏，因为不跟就会被你的气场碾压。你不是在唱歌，是在展示领导力。哪怕你在浴室里唱，花洒都得按你的拍子出水。",dims:[0,0,0,0]},
+  {id:4,name:"KTV气氛组组长",tagline:"你来KTV不是为了唱，是为了主持",description:"你不是来唱歌的，是来主持的。你点的歌都是大家会唱的，因为你的终极目标是全场大合唱。你的KPI不是唱了多少首，而是热了多少次场。话筒在你手上待不过三秒，因为你忙着递给别人。你的快乐来源不是自己的歌声，是看到别人唱嗨了。",dims:[0,0,0,1]},
+  {id:5,name:"人间小太阳",tagline:"你唱什么不重要，你开心最重要",description:"你一开口，整个房间的空气都开始蹦迪。你唱什么不重要，重要的是你在唱——而且唱得很开心。你的歌单可能是车祸现场，但没有人忍心打断你，因为你的快乐太有感染力了。你是行走的多巴胺注射器，歌声自带快乐传播属性。",dims:[0,1,1,0]},
+  {id:6,name:"灵魂共鸣机",tagline:"你不是在唱歌，是在替别人唱出心里话",description:"你唱歌不是为了炫技，是为了让某个人在某一秒觉得「这首歌就是唱给我的」。你的声音有魔力，唱完别人会说：我被理解了。你是人群中的情感路由器，三流的唱功搭配一流的共情能力，结果往往比技术流更动人。",dims:[0,1,1,1]},
+  {id:7,name:"歌单收藏家",tagline:"你的歌单三千首，能唱全的没几首",description:"你的歌单三千首，横跨民谣到重金属。你唱歌的风格取决于今天的心情，而你一天有一百八十种心情。别人问你会唱什么，你说：你点，我都会。其实没几首能唱完整——但没关系，每首歌的前奏你都是王者。",dims:[0,1,0,0]},
+  {id:8,name:"节奏打印机",tagline:"你的准度是99.9%，但0.1%的灵魂去哪了",description:"你唱歌比节拍器还准，但比节拍器还无聊。每一个音都踩在点上，每一个字都不差毫厘。你唱《小星星》能唱出校音器的精准度，但就是少了点人味儿。太完美的东西往往没有灵魂——不过你不在乎，因为你本来就是来考试的。",dims:[0,1,0,1]},
+  {id:9,name:"声乐研究员",tagline:"你研究声乐的时间是练歌时间的十倍",description:"你知道什么叫胸声混声头声边缘化，你知道自己的音域精确到半音，你能对着一个音分析十分钟的发声原理。但你唱不完整一首歌——因为你觉得没必要。你研究声乐的时间是练歌时间的十倍，你是行走的声乐维基百科。问题是：维基百科不能上台表演。",dims:[1,0,1,0]},
+  {id:10,name:"卧室录音师",tagline:"录一首歌的时间够别人录一张专辑",description:"你录一首歌的时间够别人录一张专辑。唱错一个字？重来。气息不稳？重来。你觉得完美了，发到朋友圈，别人评论：跟原唱差不多——你觉得这是对你最大的侮辱。你的目标是超越原唱，你的现状是永远在录第一句。",dims:[1,0,1,1]},
+  {id:11,name:"音乐解构者",tagline:"你是音乐圈的评论家，不是运动员",description:"你听过一万首歌，分析过每一个和弦走向。你能说出任何一个流行歌的调式、节奏型、制作手法。但别人让你唱一首，你说：我研究的是音乐，不是演唱。你的骄傲不是唱得好不好，而是懂不懂。你是音乐圈的评论家，不是运动员。",dims:[1,0,0,0]},
+  {id:12,name:"温柔点唱机",tagline:"你是一个被唱歌耽误的情感电台主播",description:"你从不主动抢麦，但当话筒递到你手上，你的声音会让全场安静。你的歌单里全是别人的故事——你只是替他们唱出来。你像深夜电台的主持人，唱完一首歌，有人眼眶红了，有人低头看手机假装没被击中。",dims:[1,0,0,1]},
+  {id:13,name:"黄昏氛围组",tagline:"你在浴室里的表现可以拿格莱美——可惜没人听到",description:"你唱歌需要三样东西：合适的灯光、合理的温度、没有人在场。你在浴室里的表现可以拿格莱美——但没有一个人有机会听到。你的歌声和你的社恐程度成正比：越没人听得见，你唱得越好。你的个人演唱会的观众永远是花洒和浴巾。",dims:[1,1,1,0]},
+  {id:14,name:"隐形主唱",tagline:"朋友圈隐藏BOSS，大招CD是社交障碍发作频率",description:"你不轻易开口，但一开口就是暴击。平时是社恐，一拿麦克风像被魂穿了。唱完又默默坐回角落假装无事发生，深藏功与名。你是朋友圈里那个「原来你唱歌这么好听」的隐藏BOSS。你的大招CD时间是：社交障碍发作频率。",dims:[1,1,1,1]},
+  {id:15,name:"浴室艺术家",tagline:"通往客厅的路比通往格莱美还难走",description:"你的个人演唱会在浴室每天准时开演。花洒是观众，浴巾是战袍，沐浴露瓶是你的御用伴奏。关上浴室门的一瞬间，你觉得自己可以开世界巡回。你最大的梦想是有朝一日能当着别人的面唱出浴室里的水平——但通往客厅的这段路，比通往格莱美还难走。",dims:[1,1,0,0]},
+  {id:16,name:"流浪歌者",tagline:"你的伴奏哥们很想哭",description:"你唱歌从来不看歌单，一切随缘。开口前你也不知道自己要唱什么，更不知道要唱哪个调。你的每一次演唱都是一场冒险——你永远不知道下一句是升调还是降调，甚至不知道下一句是唱还是念。你的自由令人羡慕，你的伴奏哥们很想哭。",dims:[1,1,0,1]},
+];
+const QUESTIONS = [
+  {id:1,text:"你去 KTV 第一件事是？",optionA:"冲到点歌台翻热门榜，先点一排再说",optionB:"先看看别人唱什么，观察一下氛围",dim:0,dirWeight:true},
+  {id:2,text:"你学一首新歌的方式是？",optionA:"对着歌词一句句抠音准和节奏，练熟了才敢唱",optionB:"听两遍直接上，差不多就行了，反正又不是考试",dim:1,dirWeight:true},
+  {id:3,text:"别人说你唱走音了，你第一反应是？",optionA:"有点不好意思，但管他的，开心就好",optionB:"不可能，你放原唱我对比一下",dim:2,dirWeight:true},
+  {id:4,text:"你的歌单习惯是？",optionA:"有固定的几首拿手曲目，反复练到形成肌肉记忆",optionB:"随缘，最近刷到什么唱什么，歌单每周大换血",dim:3,dirWeight:true},
+  {id:5,text:"你在浴室里的表现和在外面相比？",optionA:"浴室歌神，出来秒变路人",optionB:"差别不大，在哪里都是这个水平",dim:0},
+  {id:6,text:"唱《小星星》时你会？",optionA:"严格按照原版旋律和节奏，一个字不差",optionB:"不自觉就开始加花转调变节奏，原版是啥来着",dim:1},
+  {id:7,text:"你听歌时更容易被什么击中？",optionA:"歌词——这首歌写的不就是我吗",optionB:"编曲——这个转音太牛了",dim:2},
+  {id:8,text:"别人夸你唱歌好听，你一般？",optionA:"开心接受，趁热打铁再来一首",optionB:"没有啦没有啦，然后火速转移话题",dim:3},
+  {id:9,text:"如果要录一首歌发朋友圈，你需要录几遍？",optionA:"录到满意为止，一个字不对都重来",optionB:"一遍过，差不多就发，谁还逐帧听啊",dim:1},
+  {id:10,text:"你觉得自己唱得最好的时候是？",optionA:"唱慢歌，情绪完全进去的时候",optionB:"唱快歌，一个转音飙上去的时候",dim:2},
+  {id:11,text:"KTV 里话筒一般在你手上多久？",optionA:"握着就不放了，我就是麦霸",optionB:"唱完赶紧递出去，怕冷场也怕被点名",dim:0},
+  {id:12,text:"对于「降调」这件事你的态度是？",optionA:"降调是对这首歌的不尊重，必须原调",optionB:"降几个调无所谓，唱得舒服比什么都重要",dim:3},
+  {id:13,text:"你看《歌手》这类节目时更关注？",optionA:"哪个歌手把我唱哭了",optionB:"哪个歌手这期走音了",dim:2},
+  {id:14,text:"有人突然递话筒让你唱一首，你内心是？",optionA:"终于到我了！我最近那首练好了",optionB:"完了完了完了，大脑一片空白",dim:0},
+  {id:15,text:"对于「走音」的容忍度是？",optionA:"走音怎么了？感情到了那都不叫走音",optionB:"零容忍。走音比走光还严重",dim:1},
+  {id:16,text:"你理想中的唱歌场景是？",optionA:"舞台/聚光灯下/一群人面前",optionB:"一个人的深夜/浴室/无人角落",dim:0},
+];
+function calculateSingTI(input){
+  const scores={};PERSONALITIES.forEach(p=>scores[p.id]=0);
+  QUESTIONS.forEach(q=>{
+    const ans=input.answers[q.id];if(!ans)return;
+    const pts=q.dirWeight?2:1,side=ans==='A'?0:1;
+    PERSONALITIES.forEach(p=>{if(p.dims[q.dim]===side)scores[p.id]+=pts});
+  });
+  PERSONALITIES.forEach(p=>{
+    if(input.voiceIsLoud&&p.dims[0]===0)scores[p.id]+=1;
+    else if(!input.voiceIsLoud&&p.dims[0]===1)scores[p.id]+=1;
+  });
+  let winner=null,best=-1;
+  PERSONALITIES.forEach(p=>{const s=scores[p.id];if(s>best){best=s;winner=p}});
+  return winner||PERSONALITIES[0];
+}
+
+// ===== ICONS (inline SVGs) =====
+const Icons={
+  mic:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>,
+  music:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>,
+  sparkles:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 6 6 0 0 0-9-9"/><path d="M20 7c0 3-2 5-5 5"/><path d="M8 12a4 4 0 0 0 4 4"/><path d="M4 16a3 3 0 0 0 3 3"/></svg>,
+  volume:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>,
+  chevronLeft:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>,
+  arrowRight:<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>,
+  share:<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>,
+  copy:<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>,
+  check:<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+  rotate:<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>,
+  checkFull:<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+};
+
+// ===== COMPONENTS =====
+function CharacterAvatar({personality,size=100}){
+  const h=personality.id*22;
+  const s=size||100,sc=s/120;
+  const [d0,d1,d2,d3]=personality.dims;
+  const isExtrovert=d0===0,isRigorous=d1===0,isEmotional=d2===0,isControlling=d3===0;
+  const skin='#FDE8D0',hair=`hsl(${personality.id*10+10},40%,${isRigorous?40:50}%)`,
+    primary=`hsl(${h},60%,75%)`,secondary=`hsl(${h},55%,75%)`,bg=`hsl(${h},65%,92%)`;
+  const eyeL=44,eyeR=76,eyeY=48;
+  const mouthY=62;
+  return <svg width={s} height={s} viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="58" fill={bg}/>
+    <circle cx="60" cy="60" r="55" fill="none" stroke={secondary} strokeWidth="1" opacity=".4"/>
+    {/* hair */}
+    {isRigorous?
+      <><path d="M38 48Q38 30 48 26Q55 23 60 22Q65 23 72 26Q82 30 82 48" fill={hair}/><path d="M38 48L38 42Q40 38 45 36" fill={hair}/><path d="M82 48L82 42Q80 38 75 36" fill={hair}/></>
+      :<><path d="M35 45Q32 28 42 22Q50 18 60 16Q70 18 78 22Q88 28 85 45" fill={hair}/><path d="M38 42Q34 25 40 18" stroke={hair} strokeWidth="3" fill="none" strokeLinecap="round"/><path d="M82 42Q86 25 80 18" stroke={hair} strokeWidth="3" fill="none" strokeLinecap="round"/><path d="M55 20Q52 12 58 10" stroke={hair} strokeWidth="2.5" fill="none" strokeLinecap="round"/></>}
+    {/* face */}
+    <circle cx="60" cy="55" r="26" fill={skin}/>
+    {/* blush */}
+    <ellipse cx="44" cy="57" rx="5" ry="3.5" fill={isEmotional?'#FFB5B5':'#FFD4B5'} opacity=".5"/>
+    <ellipse cx="76" cy="57" rx="5" ry="3.5" fill={isEmotional?'#FFB5B5':'#FFD4B5'} opacity=".5"/>
+    {/* eyes */}
+    {isExtrovert?<>
+      <circle cx={eyeL} cy={eyeY} r="6" fill="#3D2B1F"/><circle cx={eyeL-1.5} cy={eyeY-2} r="2" fill="white" opacity=".8"/>
+      <circle cx={eyeR} cy={eyeY} r="6" fill="#3D2B1F"/><circle cx={eyeR-1.5} cy={eyeY-2} r="2" fill="white" opacity=".8"/>
+    </>:<>
+      <path d={`M${eyeL-5} ${eyeY} Q${eyeL} ${eyeY-5} ${eyeL+5} ${eyeY}`} stroke="#3D2B1F" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+      <path d={`M${eyeR-5} ${eyeY} Q${eyeR} ${eyeY-5} ${eyeR+5} ${eyeY}`} stroke="#3D2B1F" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+    </>}
+    {/* mouth */}
+    {isExtrovert
+      ?<path d={`M52 ${mouthY} Q60 ${mouthY+12} 68 ${mouthY}`} stroke="#3D2B1F" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+      :<path d={`M54 ${mouthY} Q60 ${mouthY+6} 66 ${mouthY}`} stroke="#3D2B1F" strokeWidth="2" fill="none" strokeLinecap="round"/>}
+    {/* accessories */}
+    {isControlling?<>
+      <path d="M38 48Q38 20 60 18Q82 20 82 48" stroke={secondary} strokeWidth="3" fill="none"/>
+      <rect x="34" y="44" width="8" height="14" rx="4" fill={secondary}/>
+      <rect x="78" y="44" width="8" height="14" rx="4" fill={secondary}/>
+    </>:<>
+      <g opacity=".6"><path d="M88 30L88 22L94 20L94 28" stroke={primary} strokeWidth="1.8" fill="none"/><ellipse cx="86.5" cy="31" rx="3" ry="2.5" fill={primary}/><ellipse cx="92.5" cy="29" rx="3" ry="2.5" fill={primary}/><path d="M28 38L28 30L34 28L34 36" stroke={primary} strokeWidth="1.5" fill="none"/><ellipse cx="26.5" cy="39" rx="2.5" ry="2" fill={primary}/></g>
+    </>}
+    {isRigorous?<>
+      <rect x={eyeL-9} y={eyeY-7} width="18" height="14" rx="4" stroke={secondary} strokeWidth="1.5" fill="none"/>
+      <rect x={eyeR-9} y={eyeY-7} width="18" height="14" rx="4" stroke={secondary} strokeWidth="1.5" fill="none"/>
+      <line x1={eyeL+9} y1={eyeY} x2={eyeR-9} y2={eyeY} stroke={secondary} strokeWidth="1.5"/>
+    </>:null}
+    {isEmotional
+      ?<path d="M96 50Q96 45 92 45Q88 45 88 50Q88 55 92 58Q96 55 96 50" fill={primary} opacity=".6"/>
+      :<polygon points="92,42 94,47 99,47 95,50 96,55 92,52 88,55 89,50 85,47 90,47" fill={primary} opacity=".4"/>}
+  </svg>;
+}
+
+function RecordingWave(){
+  const heights=[8,24,32,16,28,12,36,20];
+  return <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:4,height:48}}>
+    {heights.map((h,i)=><div key={i} className="wave-bar" style={{animationDelay:`${i*0.08}s`}}/>)}
+  </div>;
+}
+
+// ===== MAIN APP =====
+function App(){
+  const [step,setStep]=React.useState(stepFromUrl());
+  const [qIdx,setQIdx]=React.useState(0);
+  const [answers,setAnswers]=React.useState({});
+  const [recording,setRecording]=React.useState(false);
+  const [recordDone,setRecordDone]=React.useState(false);
+  const [voiceLoud,setVoiceLoud]=React.useState(false);
+  const [errorMsg,setErrorMsg]=React.useState('');
+  const [result,setResult]=React.useState(null);
+  const [copied,setCopied]=React.useState(false);
+  const streamRef=React.useRef(null);
+  const volRef=React.useRef([]);
+
+  function stepFromUrl(){
+    const p=new URLSearchParams(window.location.search);
+    return p.get('singti')||p.get('p')?'shared':'intro';
+  }
+
+  const sharedId=React.useMemo(()=>{
+    const p=new URLSearchParams(window.location.search);
+    const id=p.get('singti')||p.get('p');
+    return id?Number(id):null;
+  },[]);
+
+  const sharedPersonality=sharedId?PERSONALITIES.find(p=>p.id===sharedId):null;
+
+  const startRecording=async()=>{
+    try{
+      setErrorMsg('');setRecording(true);volRef.current=[];
+      const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+      streamRef.current=stream;
+      const ctx=new AudioContext();
+      const src=ctx.createMediaStreamSource(stream);
+      const an=ctx.createAnalyser();an.fftSize=256;
+      src.connect(an);
+      const data=new Uint8Array(an.frequencyBinCount);
+      const iv=setInterval(()=>{
+        an.getByteTimeDomainData(data);
+        let sum=0;for(let i=0;i<data.length;i++){const v=(data[i]-128)/128;sum+=v*v;}
+        volRef.current.push(Math.sqrt(sum/data.length));
+      },100);
+      const rec=new MediaRecorder(stream);
+      rec.onstop=()=>{
+        clearInterval(iv);
+        const avg=volRef.current.reduce((a,b)=>a+b,0)/volRef.current.length;
+        setVoiceLoud(avg>0.08);
+        setRecordDone(true);setRecording(false);
+        stream.getTracks().forEach(t=>t.stop());streamRef.current=null;ctx.close();
+      };
+      rec.start();
+      setTimeout(()=>{if(rec.state==='recording')rec.stop();},7000);
+    }catch(e){setErrorMsg('无法访问麦克风，请允许麦克风权限后重试');setRecording(false)}
+  };
+
+  const stopRecording=()=>{
+    if(streamRef.current){streamRef.current.getTracks().forEach(t=>t.stop());streamRef.current=null;}
+    const avg=volRef.current.reduce((a,b)=>a+b,0)/volRef.current.length||0;
+    setVoiceLoud(avg>0.08);setRecordDone(true);setRecording(false);
+  };
+
+  const handleAnswer=(key)=>{setAnswers(prev=>({...prev,[QUESTIONS[qIdx].id]:key}))};
+  const answered=qIdx<QUESTIONS.length&&answers[QUESTIONS[qIdx].id]!==undefined;
+  const showSubmit=qIdx===QUESTIONS.length-1&&answered;
+
+  const handleNext=()=>{if(qIdx<QUESTIONS.length-1)setQIdx(p=>p+1)};
+  const handlePrev=()=>{if(qIdx>0)setQIdx(p=>p-1)};
+
+  const handleSubmit=()=>{
+    const r=calculateSingTI({answers,voiceIsLoud:voiceLoud});
+    setResult(r);setStep('result');
+    window.history.replaceState(null,'',`?singti=${r.id}`);
+  };
+
+  const handleCopyLink=()=>{
+    const url=`${window.location.origin}${window.location.pathname}?singti=${result.id}`;
+    navigator.clipboard.writeText(url).then(()=>{setCopied(true);setTimeout(()=>setCopied(false),2000)});
+  };
+
+  const handleReset=()=>{
+    setStep('intro');setQIdx(0);setAnswers({});setRecordDone(false);setVoiceLoud(false);setErrorMsg('');setResult(null);
+    window.history.replaceState(null,'',window.location.pathname);
+  };
+
+  const handleStartTest=()=>{
+    setStep('intro');
+    window.history.replaceState(null,'',window.location.pathname);
+  };
+
+  // === SHARED CARD ===
+  if(sharedPersonality&&step==='shared'){
+    const h=sharedPersonality.id*22;
+    const shareUrl=`${window.location.origin}${window.location.pathname}?singti=${sharedPersonality.id}`;
+    return <div className="app" style={{padding:16,justifyContent:'center',alignItems:'center'}}>
+      <div className="share-card" style={{width:'100%',maxWidth:360}}>
+        <div style={{height:8,background:`linear-gradient(90deg,hsl(${h},60%,75%),hsl(${h+30},55%,80%))`}}/>
+        <div className="share-card-inner">
+          <p style={{fontSize:10,letterSpacing:3,color:`hsl(${h},40%,70%)`,marginBottom:20}}>五音不全 × SingTI</p>
+          <div style={{display:'flex',justifyContent:'center'}}><CharacterAvatar personality={sharedPersonality} size={120}/></div>
+          <p style={{fontSize:11,color:'var(--muted-fg)',letterSpacing:2,marginTop:16,marginBottom:4,textTransform:'uppercase'}}>音乐人格</p>
+          <h2 style={{fontSize:28,fontWeight:900,color:'var(--fg)',marginBottom:6}}>{sharedPersonality.name}</h2>
+          <p style={{fontSize:14,color:'var(--muted-fg)',marginBottom:20,lineHeight:1.5}}>「{sharedPersonality.tagline}」</p>
+          <div style={{background:'var(--secondary)',borderRadius:'1rem',padding:20,textAlign:'left',marginBottom:20,opacity:.8}}>
+            <p style={{fontSize:14,lineHeight:1.7,color:'var(--secondary-fg)'}}>{sharedPersonality.description}</p>
+          </div>
+          {/* QR */}
+          <div style={{marginBottom:20}}>
+            <div style={{display:'inline-flex',flexDirection:'column',alignItems:'center',gap:8,padding:16,background:'#fff',borderRadius:'1rem',border:'1px solid var(--border)'}}>
+              <img src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(shareUrl)}&bgcolor=FFF8F0&margin=10`} alt="QR" style={{borderRadius:8,width:160,height:160}}/>
+              <p style={{fontSize:10,color:'var(--muted-fg)',letterSpacing:1}}>扫码测测你的音乐人格</p>
+            </div>
+          </div>
+          <button onClick={handleStartTest} style={{fontSize:14,color:'var(--primary)',fontWeight:600,background:'none',border:'none',cursor:'pointer'}}>我也要测 →</button>
+        </div>
+      </div>
+    </div>;
+  }
+
+  // === INTRO ===
+  if(step==='intro'){
+    return <div className="app">
+      <div style={{padding:'16px 20px'}}>
+        <button className="back-btn" onClick={()=>window.history.back()} style={{width:36,height:36}}>{Icons.chevronLeft}</button>
+      </div>
+      <div style={{flex:1,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'0 24px',textAlign:'center',gap:24}}>
+        <div style={{width:80,height:80,borderRadius:'50%',background:'rgba(232,180,160,.15)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+          <div style={{color:'var(--primary)',width:40,height:40}}>{Icons.sparkles}</div>
+        </div>
+        <div>
+          <h1 style={{fontSize:28,fontWeight:900,marginBottom:8}}>SingTI</h1>
+          <p style={{fontSize:16,color:'var(--muted-fg)',lineHeight:1.6,maxWidth:300}}>唱一段《小星星》，再做 16 道选择题，测测你的音乐人格属于哪一款。</p>
+        </div>
+        <div style={{display:'flex',flexDirection:'column',gap:12,width:'100%',maxWidth:300}}>
+          {[
+            {icon:Icons.mic,step:"第一步",desc:"唱 7 秒《小星星》"},
+            {icon:Icons.music,step:"第二步",desc:"回答 16 道好玩的选择题"},
+            {icon:Icons.sparkles,step:"第三步",desc:"解锁你的专属 SingTI 人格"},
+          ].map((item,i)=>(
+            <div key={i} className="card" style={{display:'flex',alignItems:'center',gap:12,padding:16,textAlign:'left'}}>
+              <div style={{width:40,height:40,borderRadius:'50%',background:'rgba(232,180,160,.15)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,color:'var(--primary)',fontSize:20}}>{item.icon}</div>
+              <div><p style={{fontSize:13,fontWeight:600}}>{item.step}</p><p style={{fontSize:12,color:'var(--muted-fg)'}}>{item.desc}</p></div>
+            </div>
+          ))}
+        </div>
+        <button className="btn btn-primary btn-lg" style={{maxWidth:300}} onClick={()=>setStep('recording')}>开始测试</button>
+      </div>
+    </div>;
+  }
+
+  // === RECORDING ===
+  if(step==='recording'){
+    return <div className="app">
+      <div style={{padding:'16px 20px'}}>
+        <button className="back-btn" onClick={()=>setStep('intro')}>{Icons.chevronLeft}</button>
+      </div>
+      <div style={{flex:1,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'0 24px',textAlign:'center',gap:24}}>
+        <div style={{width:96,height:96,borderRadius:'50%',background:'rgba(232,180,160,.15)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+          {recording
+            ?<div className="anim-float" style={{color:'var(--primary)',width:48,height:48}}>{Icons.volume}</div>
+            :recordDone
+              ?<div style={{width:48,height:48,borderRadius:'50%',background:'rgba(168,213,186,.3)',display:'flex',alignItems:'center',justifyContent:'center'}}><span style={{fontSize:24}}>✓</span></div>
+              :<div style={{color:'var(--primary)',width:48,height:48}}>{Icons.mic}</div>}
+        </div>
+        <div>
+          <h2 style={{fontSize:22,fontWeight:700,marginBottom:12}}>
+            {recording?"唱吧！":recordDone?"录制完成！":"唱一段《小星星》"}
+          </h2>
+          {!recordDone&&!recording&&<p style={{fontSize:14,color:'var(--muted-fg)',maxWidth:280}}>用你最自然的声音唱开头两句，大约 7 秒就好</p>}
+          {recording&&<div><p style={{fontSize:18,fontWeight:600,marginBottom:16}}>一闪一闪亮晶晶，满天都是小星星...</p><RecordingWave/></div>}
+          {recordDone&&<p style={{fontSize:14,color:'var(--muted-fg)'}}>{voiceLoud?"声音挺大嘛，是个外放型选手":"声音小小的，是内敛派啊"}</p>}
+        </div>
+        {errorMsg&&<p style={{fontSize:13,color:'#E8A0A0'}}>{errorMsg}</p>}
+        {!recordDone
+          ?<button className={`btn btn-lg ${recording?'btn-destructive':'btn-primary'}`} style={{maxWidth:300}} onClick={recording?stopRecording:startRecording}>
+              {recording?"录好了 🎤":"开始录音"}
+            </button>
+          :<button className="btn btn-primary btn-lg" style={{maxWidth:300}} onClick={()=>setStep('questions')}>
+              继续答题 {Icons.arrowRight}
+            </button>}
+        {recording&&<p style={{fontSize:11,color:'var(--muted-fg)'}}>录音会在 7 秒后自动停止</p>}
+      </div>
+    </div>;
+  }
+
+  // === QUESTIONS ===
+  if(step==='questions'){
+    const q=QUESTIONS[qIdx];
+    return <div className="app">
+      <div style={{padding:'16px 20px 8px'}}>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}>
+          <button className="back-btn" onClick={qIdx>0?handlePrev:()=>setStep('intro')}>{Icons.chevronLeft}</button>
+          <span style={{fontSize:13,color:'var(--muted-fg)'}}>{qIdx+1}/{QUESTIONS.length}</span>
+          <div style={{width:36}}></div>
+        </div>
+        <div className="progress"><div className="progress-bar" style={{width:`${((qIdx+1)/QUESTIONS.length)*100}%`}}/></div>
+      </div>
+      <div style={{flex:1,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'0 24px'}}>
+        <div className="anim-slide" key={qIdx} style={{width:'100%',maxWidth:360}}>
+          <p style={{fontSize:12,color:'var(--primary)',fontWeight:500,marginBottom:16}}>{qIdx<4?"定向题":"选择题"}</p>
+          <h2 style={{fontSize:20,fontWeight:700,marginBottom:32,lineHeight:1.4}}>{q.text}</h2>
+          <div style={{display:'flex',flexDirection:'column',gap:12}}>
+            {['A','B'].map(k=>(
+              <button key={k} className={`opt-btn ${answers[q.id]===k?'selected':''}`} onClick={()=>handleAnswer(k)}>
+                <span style={{display:'flex',alignItems:'center'}}>
+                  <span className="opt-label">{k}</span>
+                  <span>{k==='A'?q.optionA:q.optionB}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div style={{padding:'24px 20px 32px'}}>
+        {showSubmit
+          ?<button className="btn btn-primary btn-lg" onClick={handleSubmit}>查看我的 SingTI ✨</button>
+          :<button className={`btn btn-primary btn-lg ${!answered?'btn-disabled':''}`} disabled={!answered} onClick={handleNext}>
+              {answered?"下一题":"请选择一个选项"}
+            </button>}
+      </div>
+    </div>;
+  }
+
+  // === RESULT ===
+  if(step==='result'&&result){
+    const h=result.id*22;
+    return <div className="app">
+      <div style={{flex:1,overflow:'auto',padding:'16px 16px 8px'}}>
+        <div className="share-card anim-scale">
+          <div style={{height:8,background:`linear-gradient(90deg,hsl(${h},60%,75%),hsl(${h+30},55%,80%))`}}/>
+          <div className="share-card-inner">
+            <p style={{fontSize:10,letterSpacing:3,color:`hsl(${h},40%,70%)`,marginBottom:16}}>五音不全 × SingTI</p>
+            <div style={{display:'flex',justifyContent:'center'}}><CharacterAvatar personality={result} size={120}/></div>
+            <p style={{fontSize:11,color:'var(--muted-fg)',letterSpacing:2,marginTop:16,marginBottom:4,textTransform:'uppercase'}}>音乐人格</p>
+            <h2 style={{fontSize:28,fontWeight:900,marginBottom:6}}>{result.name}</h2>
+            <p style={{fontSize:14,color:'var(--muted-fg)',marginBottom:20,lineHeight:1.5}}>「{result.tagline}」</p>
+            <div className="badge" style={{background:'rgba(232,180,160,.1)',color:'var(--primary)',marginBottom:20,display:'inline-flex'}}>
+              {Icons.mic} {voiceLoud?"声音外放型":"声音内敛型"}
+            </div>
+            <div style={{background:'var(--secondary)',borderRadius:'1rem',padding:20,textAlign:'left',marginBottom:20,opacity:.8}}>
+              <p style={{fontSize:14,lineHeight:1.7,color:'var(--secondary-fg)'}}>{result.description}</p>
+            </div>
+            <p style={{fontSize:10,color:'var(--muted-fg)',opacity:.6,letterSpacing:1}}>— 唱一段《小星星》，测测你的音乐人格 —</p>
+          </div>
+        </div>
+        {/* Stats */}
+        <div className="card" style={{marginTop:12,padding:16}}>
+          <p style={{fontSize:12,color:'var(--muted-fg)',fontWeight:500,marginBottom:12}}>你的测试数据</p>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
+            <div style={{padding:12,borderRadius:12,background:'rgba(245,237,232,.5)',textAlign:'center'}}>
+              <p style={{fontSize:20,fontWeight:700}}>{PERSONALITIES.findIndex(p=>p.id===result.id)+1}</p>
+              <p style={{fontSize:12,color:'var(--muted-fg)'}}>/ 16 种人格</p>
+            </div>
+            <div style={{padding:12,borderRadius:12,background:'rgba(245,237,232,.5)',textAlign:'center'}}>
+              <p style={{fontSize:20,fontWeight:700}}>{Object.keys(answers).length}</p>
+              <p style={{fontSize:12,color:'var(--muted-fg)'}}>/ 16 题已答</p>
+            </div>
+          </div>
+        </div>
+        {/* Share actions */}
+        <div style={{display:'flex',gap:8,marginTop:12}}>
+          <button className="btn btn-outline btn-sm" style={{flex:1}} onClick={handleCopyLink}>
+            {copied?<>{Icons.check} 已复制</>:<>{Icons.copy} 复制链接</>}
+          </button>
+          <button className="btn btn-outline btn-sm" style={{flex:1}} onClick={()=>{
+            const text=`我测出了我的 SingTI 音乐人格：${result.name} ——「${result.tagline}」\n\n来测测你的音乐人格！${window.location.origin}${window.location.pathname}?singti=${result.id}`;
+            if(navigator.share)navigator.share({title:'SingTI 音乐人格',text});
+            else navigator.clipboard.writeText(text).then(()=>alert('已复制到剪贴板！'));
+          }}>
+            {Icons.share} 分享
+          </button>
+        </div>
+      </div>
+      {/* Bottom */}
+      <div style={{padding:'12px 16px',borderTop:'1px solid var(--border)',display:'flex',gap:12}}>
+        <button className="btn btn-outline btn-sm" style={{flex:1}} onClick={handleReset}>{Icons.rotate} 重测</button>
+      </div>
+    </div>;
+  }
+
+  return null;
+}
+
+// ===== RENDER =====
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<React.StrictMode><App/></React.StrictMode>);
+</script>
+</body>
+</html>
