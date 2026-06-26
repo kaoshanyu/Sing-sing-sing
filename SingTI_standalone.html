@@ -109,27 +109,27 @@ const PERSONALITIES = [
   {id:16,name:"流浪歌者",tagline:"你的伴奏哥们很想哭",description:"你唱歌从来不看歌单，一切随缘。开口前你也不知道自己要唱什么，更不知道要唱哪个调。你的每一次演唱都是一场冒险——你永远不知道下一句是升调还是降调，甚至不知道下一句是唱还是念。你的自由令人羡慕，你的伴奏哥们很想哭。",dims:[1,1,0,1]},
 ];
 const QUESTIONS = [
-  {id:1,text:"你去 KTV 第一件事是？",optionA:"冲到点歌台翻热门榜，先点一排再说",optionB:"先看看别人唱什么，观察一下氛围",dim:0,dirWeight:true},
-  {id:2,text:"你学一首新歌的方式是？",optionA:"对着歌词一句句抠音准和节奏，练熟了才敢唱",optionB:"听两遍直接上，差不多就行了，反正又不是考试",dim:1,dirWeight:true},
-  {id:3,text:"别人说你唱走音了，你第一反应是？",optionA:"有点不好意思，但管他的，开心就好",optionB:"不可能，你放原唱我对比一下",dim:2,dirWeight:true},
-  {id:4,text:"你的歌单习惯是？",optionA:"有固定的几首拿手曲目，反复练到形成肌肉记忆",optionB:"随缘，最近刷到什么唱什么，歌单每周大换血",dim:3,dirWeight:true},
-  {id:5,text:"你在浴室里的表现和在外面相比？",optionA:"浴室歌神，出来秒变路人",optionB:"差别不大，在哪里都是这个水平",dim:0},
-  {id:6,text:"唱《小星星》时你会？",optionA:"严格按照原版旋律和节奏，一个字不差",optionB:"不自觉就开始加花转调变节奏，原版是啥来着",dim:1},
-  {id:7,text:"你听歌时更容易被什么击中？",optionA:"歌词——这首歌写的不就是我吗",optionB:"编曲——这个转音太牛了",dim:2},
-  {id:8,text:"别人夸你唱歌好听，你一般？",optionA:"开心接受，趁热打铁再来一首",optionB:"没有啦没有啦，然后火速转移话题",dim:3},
-  {id:9,text:"如果要录一首歌发朋友圈，你需要录几遍？",optionA:"录到满意为止，一个字不对都重来",optionB:"一遍过，差不多就发，谁还逐帧听啊",dim:1},
-  {id:10,text:"你觉得自己唱得最好的时候是？",optionA:"唱慢歌，情绪完全进去的时候",optionB:"唱快歌，一个转音飙上去的时候",dim:2},
-  {id:11,text:"KTV 里话筒一般在你手上多久？",optionA:"握着就不放了，我就是麦霸",optionB:"唱完赶紧递出去，怕冷场也怕被点名",dim:0},
-  {id:12,text:"对于「降调」这件事你的态度是？",optionA:"降调是对这首歌的不尊重，必须原调",optionB:"降几个调无所谓，唱得舒服比什么都重要",dim:3},
-  {id:13,text:"你看《歌手》这类节目时更关注？",optionA:"哪个歌手把我唱哭了",optionB:"哪个歌手这期走音了",dim:2},
-  {id:14,text:"有人突然递话筒让你唱一首，你内心是？",optionA:"终于到我了！我最近那首练好了",optionB:"完了完了完了，大脑一片空白",dim:0},
-  {id:15,text:"对于「走音」的容忍度是？",optionA:"走音怎么了？感情到了那都不叫走音",optionB:"零容忍。走音比走光还严重",dim:1},
-  {id:16,text:"你理想中的唱歌场景是？",optionA:"舞台/聚光灯下/一群人面前",optionB:"一个人的深夜/浴室/无人角落",dim:0},
+  {id:1,text:"你去 KTV 第一件事是？",optionA:"冲到点歌台翻热门榜，先点一排再说",optionB:"先看看别人唱什么，观察一下氛围",optionC:"看谁在，再决定",dim:0,dirWeight:true},
+  {id:2,text:"你学一首新歌的方式是？",optionA:"对着歌词一句句抠音准和节奏，练熟了才敢唱",optionB:"听两遍直接上，差不多就行了",optionC:"看难度，简单的直接上，难的抠一下",dim:1,dirWeight:true},
+  {id:3,text:"别人说你唱走音了，你第一反应是？",optionA:"有点不好意思，但管他的，开心就好",optionB:"不可能，你放原唱我对比一下",optionC:"哈哈笑一下，然后默默记住",dim:2,dirWeight:true},
+  {id:4,text:"你的歌单习惯是？",optionA:"有固定的几首拿手曲目，反复练到形成肌肉记忆",optionB:"随缘，最近刷到什么唱什么，歌单每周大换血",optionC:"有几首保留曲目，也会加新歌",dim:3,dirWeight:true},
+  {id:5,text:"你在浴室里的表现和在外面相比？",optionA:"浴室歌神，出来秒变路人",optionB:"差别不大，在哪里都是这个水平",optionC:"都还行，主要看心情",dim:0},
+  {id:6,text:"唱《小星星》时你会？",optionA:"严格按照原版旋律和节奏，一个字不差",optionB:"不自觉就开始加花转调变节奏",optionC:"大概按原版，偶尔自由发挥一下",dim:1},
+  {id:7,text:"你听歌时更容易被什么击中？",optionA:"歌词——这首歌写的不就是我吗",optionB:"编曲——这个转音太牛了",optionC:"都看，歌词和编曲缺一不可",dim:2},
+  {id:8,text:"别人夸你唱歌好听，你一般？",optionA:"开心接受，趁热打铁再来一首",optionB:"没有啦没有啦，然后火速转移话题",optionC:"开心但谦虚一下，心里暗爽",dim:3},
+  {id:9,text:"如果要录一首歌发朋友圈，你需要录几遍？",optionA:"录到满意为止，一个字不对都重来",optionB:"一遍过，差不多就发",optionC:"两三遍，差不多就选一个发了",dim:1},
+  {id:10,text:"你觉得自己唱得最好的时候是？",optionA:"唱慢歌，情绪完全进去的时候",optionB:"唱快歌，一个转音飙上去的时候",optionC:"看歌，有的歌唱情绪，有的歌炫技",dim:2},
+  {id:11,text:"KTV 里话筒一般在你手上多久？",optionA:"握着就不放了，我就是麦霸",optionB:"唱完赶紧递出去，怕冷场也怕被点名",optionC:"该唱就唱，该递就递",dim:0},
+  {id:12,text:"对于「降调」这件事你的态度是？",optionA:"降调是对这首歌的不尊重，必须原调",optionB:"降几个调无所谓，唱得舒服最重要",optionC:"看情况，实在唱不上去就降",dim:3},
+  {id:13,text:"你看《歌手》这类节目时更关注？",optionA:"哪个歌手把我唱哭了",optionB:"哪个歌手这期走音了",optionC:"都关注，技术和情感都重要",dim:2},
+  {id:14,text:"有人突然递话筒让你唱一首，你内心是？",optionA:"终于到我了！我最近那首练好了",optionB:"完了完了完了，大脑一片空白",optionC:"有点紧张，但来都来了",dim:0},
+  {id:15,text:"对于「走音」的容忍度是？",optionA:"走音怎么了？感情到了那都不叫走音",optionB:"零容忍。走音比走光还严重",optionC:"偶尔可以接受，一直走不行",dim:1},
+  {id:16,text:"你理想中的唱歌场景是？",optionA:"舞台/聚光灯下/一群人面前",optionB:"一个人的深夜/浴室/无人角落",optionC:"有朋友在的轻松场合",dim:0},
 ];
 function calculateSingTI(input){
   const scores={};PERSONALITIES.forEach(p=>scores[p.id]=0);
   QUESTIONS.forEach(q=>{
-    const ans=input.answers[q.id];if(!ans)return;
+    const ans=input.answers[q.id];if(!ans||ans==='C')return; // C=中立,不计分
     const pts=q.dirWeight?2:1,side=ans==='A'?0:1;
     PERSONALITIES.forEach(p=>{if(p.dims[q.dim]===side)scores[p.id]+=pts});
   });
@@ -418,11 +418,11 @@ function App(){
           <p style={{fontSize:12,color:'var(--primary)',fontWeight:500,marginBottom:16}}>{qIdx<4?"定向题":"选择题"}</p>
           <h2 style={{fontSize:20,fontWeight:700,marginBottom:32,lineHeight:1.4}}>{q.text}</h2>
           <div style={{display:'flex',flexDirection:'column',gap:12}}>
-            {['A','B'].map(k=>(
+            {['A','B','C'].map(k=>(
               <button key={k} className={`opt-btn ${answers[q.id]===k?'selected':''}`} onClick={()=>handleAnswer(k)}>
                 <span style={{display:'flex',alignItems:'center'}}>
                   <span className="opt-label">{k}</span>
-                  <span>{k==='A'?q.optionA:q.optionB}</span>
+                  <span>{k==='A'?q.optionA:k==='B'?q.optionB:q.optionC}</span>
                 </span>
               </button>
             ))}
